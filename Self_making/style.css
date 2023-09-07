@@ -1,0 +1,272 @@
+
+/* ------------------------------------------------------------
+PC用
+----------------------------------------------------------------*/
+@media screen and (min-width: 768px){
+
+  /* フォント設定--------------------------------------------*/
+html {
+  font-size: 3px;
+}
+body {
+  color: #000000;
+  font-family: "Noto Sans Japanease", Meiryo, Arial, sans-serif;
+}
+p, ul {
+  font-size: 6rem;
+}
+#logo, #nav-pc {
+  font-size: 11rem;
+}
+.index-h2 {
+  font-size: 11rem;
+}
+#about-name {
+  font-size: 8rem;
+}
+
+/* スタイル設定--------------------------------------------*/
+body {
+  min-width: 375px;
+  background-color: #ffffff;
+  margin: 0 auto 0 auto;
+  /* position: absolute; */
+ }
+
+/* header ---------------------------------------------------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 598px;
+  margin: 10px auto 10px auto;
+  align-items: center;
+/*  */
+  background-color: yellow;
+}
+
+ #logo { 
+  border:solid 1px  #000000;
+  padding: 5px 20px 5px 20px;
+  margin: 10px 10px 10px 10px;
+}
+
+#nav-pc {
+  text-align: right;
+  margin-right: 20px;
+}
+
+header > a {text-decoration: none;}
+header > a:link { color: #0d0d0d;}
+header > a:visited { color: #0d0d0d;}
+header > a:hover { color: #0d0d0d; text-decoration: underline;}
+
+#nav-pc > a {text-decoration: none;}
+#nav-pc > a:link { color: #0d0d0d;}
+#nav-pc > a:visited { color: #0d0d0d;}
+#nav-pc > a:hover { color: #0d0d0d; text-decoration: underline;}
+
+
+/* Main visual ---------------------------------------------------*/
+#main-visual {
+  text-align: center;
+/*  */
+  background-color: aquamarine;
+}
+#main-image {
+  height: 400px;
+  width: auto;
+  text-align: center;
+}
+
+/* #About ---------------------------------------------------*/
+#about-section {
+  width: 598px;
+  margin: 0 auto 0 auto;
+}
+.index-h2 {
+  margin: 30px auto 20px auto;
+  text-align: center;
+ /*  */
+  background-color: aqua;
+}
+#about-section > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ /*  */
+  background-color: beige;
+}
+#about-image {
+  height: 142px;
+  width: 142px;
+  margin: 0px 0px 0px 0px ;
+}
+
+/* #Works ---------------------------------------------------*/
+#works-section {
+  width: 598px;
+  margin: 0 auto 0 auto;
+}
+#works-div {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+/*  */
+  background-color: beige;
+ 
+}
+.works-box {
+  width: 179px;
+/*  */
+  background-color: yellowgreen;
+}
+.works-image {
+  width: 100%;
+}
+
+/* #footer ---------------------------------------------------*/
+footer {
+  text-align: center;
+  margin: 30px 0 50px 0;
+/*  */
+  background-color: blanchedalmond;
+}
+
+}
+
+/* ------------------------------------------------------------
+スマホ
+----------------------------------------------------------------*/
+@media screen and (max-width: 767px){
+
+/* フォント設定--------------------------------------------*/
+/* ----------------------------------------------------- */
+html {
+  font-size: 2px;
+}
+body {
+  color: #000000;
+  font-family: "Noto Sans Japanease", Meiryo, Arial, sans-serif;
+}
+p, ul {
+  font-size: 6rem;
+}
+#logo, #nav-pc {
+  font-size: 11rem;
+}
+.index-h2 {
+  font-size: 11rem;
+}
+#about-name {
+  font-size: 24px;
+}
+
+/* スタイル設定--------------------------------------------------*/
+/* ------------------------------------------------------------*/
+  body {
+    min-width: 375px;
+    background-color: #ffffff;
+    margin: 0 auto 0 auto;
+   }
+  
+  /* header ---------------------------------------------------*/
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px auto 10px auto;
+    align-items: center;
+  /*  */
+    background-color: yellow;
+  }
+  
+   #logo { 
+    border:solid 1px  #000000;
+    padding: 1rem 7rem 1rem 7rem;
+    margin: 10px 10px 10px 10px;
+  }
+  
+  #nav-pc {
+    text-align: right;
+    margin-right: 20px;
+  }
+  
+  header > a {text-decoration: none;}
+  header > a:link { color: #0d0d0d;}
+  header > a:visited { color: #0d0d0d;}
+  header > a:hover { color: #0d0d0d; text-decoration: underline;}
+  
+  #nav-pc > a {text-decoration: none;}
+  #nav-pc > a:link { color: #0d0d0d;}
+  #nav-pc > a:visited { color: #0d0d0d;}
+  #nav-pc > a:hover { color: #0d0d0d; text-decoration: underline;}
+  
+  /* Main visual ---------------------------------------------------*/
+  #main-visual {
+    width: 100%;
+    text-align: center;
+  /*  */
+    background-color: aquamarine;
+  }
+  #main-image {
+    width: 100%;
+  }
+  
+  /* #About ---------------------------------------------------*/
+  #about-section {
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
+  .index-h2 {
+    margin: 30px auto 20px auto;
+    text-align: center;
+   /*  */
+    background-color: aqua;
+  }
+  #about-section > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   /*  */
+    background-color: beige;
+  }
+  #about-image {
+    height: 142px;
+    width: 142px;
+    margin: 0px 0px 0px 0px ;
+  }
+  
+  /* #Works ---------------------------------------------------*/
+  #works-section {
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
+  #works-div {
+  /*  */
+    background-color: beige;
+    text-align: center;
+  }
+  .works-box {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  /*  */
+    background-color: yellowgreen;
+  }
+  .works-image {
+    width: 100%;
+    margin:0 0px 0 0px;
+  }
+  
+  /* #footer ---------------------------------------------------*/
+  footer {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 50px 0;
+  /*  */
+    background-color: blanchedalmond;
+  }
+  
+  }
+  
+
