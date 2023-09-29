@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+}
+
+/* PC、スマホ共通スタイル */
+  h2{
+    font-family: "Noto Sans CJK JP";
+    font-size: 32px;
+    color: #1B9240;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+  }
+  h3 {
+    font-family: "Noto Sans CJK JP";
+    font-size: 24px;
+    color: #1B9240;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+  }
+  .dark_green {
+    color: #0C4324;
+  }
+  p{
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+  }
+
+/* PCの設定 
+***********************************************************/
+  body {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    width: 1280px;
+ 
+  }
+  /* header */
+  header {
+    /* height: 584px; */
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    flex-wrap: nowrap;
+    display: flex;
+    z-index: 10;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  header > div {
+    left: 0;
+    width: 30%;
+  }
+  #logo {
+    width: 100%;
+  }
+  #nav-pc{
+    display: flex;
+    right: 20px;
+    width: 50%;
+    color: #ffffff;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+/* ナビゲーションのリンクの装飾設定 */
+  #nav-pc > a {text-decoration: none;}
+  #nav-pc > a:link {color: #ffffff;}
+  #nav-pc > a:visited {color: #ffffff;}
+  #nav-pc > a:hover {color: #000000}
+  #nav-pc > a:active {color: #ffffff;}
+
+/* ホーム */
+#home {
+  position: relative;
+  height: 554px;
+}
+#tate-message {
+  position: absolute;
+  writing-mode: vertical-rl;
+  top: 25%;
+  left: 8%;
+  font-family: "Shippori Mincho";
+  font-size: 28px;
+  color: #1B9240;
+  text-decoration:underline dotted;
+  line-height:60px;
+  letter-spacing: 0.3em;
+}
+#top-img {
+  position: absolute;
+  width: 80%;
+  top: 0;
+  right: 0;
+  clip-path: circle(970px at 100% 30%);
+  z-index: -1;
+}
+#top-img > img {
+  width: 100%;
+}
+#reservation {
+  background-color: #0C4324;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+#back-img {
+  position: absolute;
+  left: 21%;
+  width: 500px;
+  height: 80%;
+  background-color: #F0F5E1;
+  clip-path: circle(500px at 100% 30%);
+  z-index: -2;
+}
+
+  /* ニュースの設定 */
+  #news {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+/* コンセプトの設定 */
+  #about {
+    width: 100%; 
+    height: 1000px;
+    top: 900px;
+    background-color: #ffffff;
+    text-align: left;
+  }
+
+/* コース・料金の設定 */
+  #course {
+    width: 100%;
+    height: 1000px;
+    top: 900px;
+    background-color: #F0F5E1;
+    text-align: center;
+    z-index: -3;
+  }
+  #course_div {
+    position: relative;
+    width: 100%;
+    height: 100%
+  }
+  #course_table {
+    margin: 50px auto;
+    z-index: 11;
+  }
+  .course_img {
+    border-radius: 5%;
+    margin: 0 40px;
+  }
+  .course_list {
+    text-align: left;
+    margin: 0 40px;
+  }
+  .bgicon {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    z-index: -1;
+  }
+  #h1_back {
+    font-size: 133.94px;
+    font-style: "Merriweather Sans";
+    color: #EBF0DC;
+    position: absolute;
+    left: 50px;
+    top: 200px;
+    z-index: -2;  
+  }
+
+/* お客様の声の設定 */
+  #voice {
+    width: 1280px; 
+    top: 900px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+/* アクセスの設定 */
+  #access {
+    width: 100%; 
+    top: 900px;
+    background-color: #F0F5E1;
+  }
+
+  .voice_img {
+    border-radius: 50%;
+  }

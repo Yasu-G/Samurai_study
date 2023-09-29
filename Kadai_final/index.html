@@ -1,0 +1,212 @@
+<!--*****************************
+  # 整骨院Web ページ構成
+  - トップページ (index.html#top)
+  - 当院について (about.html)
+  - コース・料金 (course.html)
+  - お知らせ (news.html)
+  - お知らせ詳細 (page-name.html)
+  - お客様の声 (voice.html)
+  - ご予約・お問合せサンクスページ (contact-thanks.html)  
+    
+  # トップページ 構成
+  - header
+  - ホーム (id="home")
+  - お知らせ (id="news")
+  - Concept (id="about")
+  - コース料金 (id="course")
+  - お客様の声 (id="voice")
+  - アクセス (id="access") 
+  - footer (id="footer")
+*****************************-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>SAMURAI整体院</title>
+  <meta name="description" content="SAMURAI整体院の紹介ページです">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet">
+
+  <!-- slickの読み込み -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+</head>
+<body>
+  <header>
+      <div>
+      <img id="logo" src="img/Frame 2259.jpg" alt="logo">
+     </div>
+      <nav id="nav-pc">
+        <a href="#home">ホーム </a>
+        <a href="about.html">当院について </a> 
+        <a href="course.html">コース・料金 </a> 
+        <a href="news.html">お知らせ </a>
+        <a href="voice.html">お客様の声 </a>
+        <a id="reservation" href="contact-thanks.html">ご予約・お問合せ </a>
+      </nav>
+  </header>
+  
+  <main>
+  <article>
+  <section id="home">
+    <!-- カーセル：TOP-CarouselGroup1-4、SP-TOP-CarouselGroup1-4 -->
+    <h1 id="tate-message" >根本的な症状改善を<br>サポートします</h1>
+    <div id="top-img" >
+      <img src="img/TOP-Carouselgroup1.jpg" alt="TOP-Carouselgroup">
+    </div>
+    <div id="back-img"></div>
+  </section>
+
+<!--お知らせ-->
+  <section id="news">
+    <span>News</span>
+    <span>お知らせ</span>
+    <span>日時</span>
+    <span>営業日時</span>
+    <span>お知らせ題名</span>
+    <span><a href="news.html">-> お知らせ一覧へ</a></span>
+  </section>
+
+<!-- コンセプト・特徴 -->
+  <section id="about">
+    <img src="img/BGicon_Light.png" alt="BGicon_Light">
+    <h2>Concept　特徴</h2>
+    <h2>日々変化する<br>カラダと心を癒す<br>パーソナル<br>トレーナーとして</h2>
+    <p>当院では、問診にてお客様の症状や生活スタイル、ご希望を丁寧にお伺いした上で施術方針を立てていきます。また、根本的に症状を改善するために、お客様ご自身で行えるケアやストレッチもお伝えします。ご不安な点や疑問点などお気軽にご相談くださいませ。</p>
+    <img src="img/Concept-Imagegroup.jpg">
+    <a href="about.html">-> 当院について</a> 
+  </section>
+
+<!-- コース・料金 --> 
+  <section id="course">
+    <div id="course_div">
+      <h3>＼コース・料金／</h3>
+      <h3>当院では保険診療、自費診療ともにご対応しております</h3>
+      <table id="course_table">
+        <tr>
+          <td>
+            <img class="course_img" src="img/TOP-insurance1.jpg" alt="保険診療写真">
+            <div class="course_list">
+              <h3 class="dark_green">保険診療</h3>
+              <ul>
+                <li>骨折・打撲・捻挫・脱臼</li>
+                <li>スポーツ診療</li>
+                <li>交通事故</li>
+              </ul>
+            </div>
+          </td>
+          <td>
+            <img class="course_img" src="img/TOP-self1.jpg" alt="自賠責診療写真">
+            <div class="course_list">
+              <h3 class="dark_green">自賠責診療</h3>
+              <ul>
+                <li>腰痛・肩こり</li>
+                <li>冷え性・だるさ</li>
+                <li>骨盤・背骨矯正</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <a href="course.html">-> コース・料金詳細へ</a>
+      <img class="bgicon" src="img/BGicon_Green.png" alt="BGicon_Green">
+      <h1 id="h1_back">course</h1>
+    </div> 
+  </section>
+
+<!-- お客様の声  -->
+  <section id="voice">
+    <h3>＼お客様の声／</h3>
+    <h3>痛みの改善に加えて自分で予防もできるようになりました</h3>
+    <table>
+      <tr>
+        <td>
+          <img class="voice_img" src="img/TOP-user1.jpg" alt="S・K様写真">
+          <h3 class="dark_green">S・K様　30代女性</h3>
+          <p>1ヶ月で腰の痛みが軽減しました。
+            自分で自宅でできるケアも教えていただき、お任せしてよかったです。</p>
+        </td>
+        <td>
+          <img class="voice_img" src="img/TOP-user2.jpg" alt="S・K様写真">
+          <h3 class="dark_green">T・M様 40代男性</h3>
+          <p>マラソンで右膝が痛むので、施術を受けています。
+              なぜ痛みが生じるのかを身体の仕組みから教えていただき、
+              普段の練習メニューも工夫できています。</p>
+        </td>
+        <td>
+          <img class="voice_img" src="img/TOP-user3.jpg" alt="S・K様写真">
+          <h3 class="dark_green"> S・T様 60代女性</h3>
+          <p>転倒して足を骨折したのをきっかけに、
+            痛みの軽減と筋肉の衰えを防ぐための方針を立てていただいています。
+            今は毎日元気に近所を散歩できています。</p>
+        </td>
+      </tr>
+    </table>
+    <a href="voice.html">-> お客様の声一覧へ</a> 
+  </section>
+
+<!-- アクセス --> 
+  <section id="access"> 
+    <h3>＼お気軽にご来院ください／</h3>
+    <h3>JR「秋葉原駅」より徒歩1分</h3>
+    <p>
+      〒101-0022　東京都千代田区神田練塀町300番地  住友不動産秋葉原駅前ビル 5F
+    </p>
+    <p>tel: 03-1234-5678</p>
+    <table>
+      <tr>
+        <th>営業時間</th>
+        <th>月</th>
+        <th>火</th>
+        <th>水</th>
+        <th>木</th>
+        <th>金</th>
+        <th>土</th>
+        <th>日</th>
+      </tr>
+      <tr>
+        <td>9:00〜12:30</td>
+        <td>●</td>
+        <td>●</td>
+        <td>-</td>
+        <td>●</td>
+        <td>●</td>
+        <td>●</td>
+        <td>●</td>
+      </tr>
+      <tr>
+        <td>9:00〜12:30</td>
+        <td>●</td>
+        <td>●</td>
+        <td>-</td>
+        <td>●</td>
+        <td>●</td>
+        <td>●</td>
+        <td>●</td>
+      </tr>
+    </table>
+    <a href="contact-thanks.html">ご予約・お問合せはこちらから</a> 
+    <a href="about.html">GoogleMapリンク</a> 
+  </section>
+
+  </article>
+  </main>
+  <footer>
+
+  </footer>
+
+  <!-- jQuery設定 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- slickの読み込み -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
