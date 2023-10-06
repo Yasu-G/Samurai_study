@@ -1,5 +1,8 @@
+/* rest css入れる方がいい */
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* PC、スマホ共通スタイル */
@@ -19,7 +22,7 @@
     line-height: 24px;
     letter-spacing: 0em;
   }
-  .dark_green {
+  .dark-green {
     color: #0C4324;
   }
   p{
@@ -31,18 +34,17 @@
     letter-spacing: 0em;
   }
 
-/* PCの設定 
-***********************************************************/
+/* ********************************************************** */
+/* PCの設定 */
+@media screen and (min-width: 768px){
+/************************************************************/
   body {
-    margin: 0 auto;
-    text-align: center;
     position: relative;
+    margin: 0 auto;
     width: 1280px;
- 
   }
-  /* header */
+  /* header ******************************/
   header {
-    /* height: 584px; */
     position: absolute;
     top: 10px;
     width: 100%;
@@ -52,39 +54,46 @@
     justify-content: space-between;
     padding: 0 20px;
   }
-  header > div {
-    left: 0;
-    width: 30%;
-  }
   #logo {
-    width: 100%;
+    left: 0;
+    width: 240px;
+    height: 32px;
+    /* margin-left: 20px; */
   }
   #nav-pc{
     display: flex;
-    right: 20px;
-    width: 50%;
+    width: 60%;
     color: #ffffff;
     align-items: center;
     justify-content: space-around;
+    /* margin-right: 20px; */
   }
 
 /* ナビゲーションのリンクの装飾設定 */
   #nav-pc > a {text-decoration: none;}
   #nav-pc > a:link {color: #ffffff;}
   #nav-pc > a:visited {color: #ffffff;}
-  #nav-pc > a:hover {color: #000000}
+  #nav-pc > a:hover {color: #000000;}
   #nav-pc > a:active {color: #ffffff;}
+  
+  #reservation {
+    background-color: #0C4324;
+    padding: 5px 10px;
+    border-radius: 7px;
+  }
 
-/* ホーム */
+/* ホーム ***********************************************************/
 #home {
   position: relative;
-  height: 554px;
+  margin: 0;
+  width: 100%;
+  height: 600px;
 }
 #tate-message {
   position: absolute;
   writing-mode: vertical-rl;
   top: 25%;
-  left: 8%;
+  left: 100px;
   font-family: "Shippori Mincho";
   font-size: 28px;
   color: #1B9240;
@@ -94,19 +103,11 @@
 }
 #top-img {
   position: absolute;
-  width: 80%;
+  height: 100%;
   top: 0;
   right: 0;
   clip-path: circle(970px at 100% 30%);
   z-index: -1;
-}
-#top-img > img {
-  width: 100%;
-}
-#reservation {
-  background-color: #0C4324;
-  padding: 5px 10px;
-  border-radius: 7px;
 }
 #back-img {
   position: absolute;
@@ -117,80 +118,412 @@
   clip-path: circle(500px at 100% 30%);
   z-index: -2;
 }
-
-  /* ニュースの設定 */
+#back-green01 {
+  position: absolute;
+  z-index: -3;
+  top: 10%;
+  left: 100px;
+}
+#back-green02 {
+  position: absolute;
+  z-index: -3;
+  top: 55%;
+  left: 30px;
+}
+  /* ニュースの設定***********************************************************/
   #news {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
-
-/* コンセプトの設定 */
-  #about {
-    width: 100%; 
-    height: 1000px;
-    top: 900px;
-    background-color: #ffffff;
-    text-align: left;
-  }
-
-/* コース・料金の設定 */
-  #course {
-    width: 100%;
-    height: 1000px;
-    top: 900px;
-    background-color: #F0F5E1;
-    text-align: center;
-    z-index: -3;
-  }
-  #course_div {
     position: relative;
     width: 100%;
-    height: 100%
+    margin: 18px 0px 0 0px;
+    display: flex;
+    font-family: "Noto Sans JP";
+    align-items: center;
   }
-  #course_table {
-    margin: 50px auto;
-    z-index: 11;
+  #news-sec01{
+    margin-left: 100px;
   }
-  .course_img {
-    border-radius: 5%;
-    margin: 0 40px;
+  #news-sec02{
+    margin-left: 100px;
   }
-  .course_list {
-    text-align: left;
-    margin: 0 40px;
+  #news-link{
+    text-align: right;
+    margin-right: 100px;
+    position: absolute;
+    right: 0;
+  }
+    /* ナビゲーションのリンクの装飾設定 */
+    #news-link > a {text-decoration: none;}
+    #news-link > a:link {color: #000000;}
+    #news-link > a:visited {color:  #000000;}
+    #news-link > a:hover {color: #0C4324;}
+    #news-link > a:active {color:  #000000;}
+
+  #news01{
+    margin-left: 0px;
+    font-size: 24px;
+    color: #1B9240;
+    font-weight: bold;
+  }
+  #news02{
+    margin-left: 10px;
+    font-size: 18px;
+    color: #1B9240;
+  }
+  #news03{
+    margin-left: 30px;
+    font-size: 16px;
+    color: #000000;
+  }
+  #news04{
+    margin-left: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #0C4324;
+    padding: 5px 10px 5px 10px;
+    border-radius: 7px;
+  }
+  #news05{
+    margin-left: 10px;
+    font-size: 16px;
+    color: #000000;
+  }
+
+/* コンセプトの設定 ***********************************************************/
+  #about {
+    width: 100%; 
+    height: 700px;
+    position: relative;
+  }
+  #about-bigicon {
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    right: 0px;
+  }
+  #about-h1back{
+    position: absolute;
+    font-size: 133.94px;
+    font-family: "Merriweather Sans";
+    color: #f7f9f7;
+    ;
+    top: 8%;
+    left: 5%;
+    z-index: -2;
+  }
+  #about-table {
+    width: 68%;
+    margin:120px auto;
+  }
+  #about-table >div {
+    display: flex;
+    flex-direction: row-reverse; /*ひっくり返すコマンド*/
+  }
+  #about-left {
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+  }
+  #about-title {
+    font-size: 24px;
+    color: #1B9240;
+    line-height: 1.2em;
+  }
+  #about-message {
+    margin-top: 20px;
+    line-height: 1.8em;
+  }
+  #about-comment {
+    margin-top: 20px;
+  }
+  #about-link{
+    position: absolute;
+    right: 0;
+    margin-top: 50px;
+  }
+
+  /* ナビゲーションのリンクの装飾設定 */
+  .links > a {
+    text-decoration: none;
+    border: 1px solid #000000;
+    color: #000000;
+    border-radius: 7px;
+    padding: 5px 10px 5px 10px;
+    margin-top: 50px;
+  }
+  .links > a:link {color: #000000;}
+  .links > a:visited {color:  #000000;}
+  .links > a:hover {color: #0C4324; }
+  .links > a:active {
+    border: 1px solid #0C4324;
+    color:  #ffffff; 
+    background-color: #0C4324;
+    }
+
+  #about-img {
+    vertical-align: top;
+  }
+  .about-img {
+    margin: 5px 0 50px 80px;
+  }
+
+/* waveの設定 ***********************************************************/
+  #wave {
+    position: relative;
+  }
+  #white-back{
+    width: 100%;
+    height: 90px;
+    background-color: #ffffff;
+  }
+  #green-back{
+    width: 100%;
+    height: 50px;
+    background-color: #F0F5E1;
+  }
+  #green-circle {
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    right: 0;
+    top: 52px;
+    background-color: #F0F5E1;
+    clip-path: circle(1300px at 50% 1300px);
+    z-index: 10;
+  }
+  #white-circle {
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    top: 73px;
+    left: 0;
+    background-color: #f7f9f7;
+    clip-path: circle(1300px at 50% 1300px);
+    transform: scale(1, -1);
+    z-index: 7;
+  }
+  #green2-circle {
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    right: 0;
+    top: 40px;
+    background-color: #f7f9f7;
+    clip-path: circle(1300px at 50% 1300px);
+    z-index: 8;
+  }
+  #white2-circle {
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    top: 62px;
+    left: 0;
+    background-color: #ffffff;
+    clip-path: circle(1300px at 50% 1300px);
+    transform: scale(1, -1);
+    z-index: 9;
+  }
+
+/* コース・料金の設定 ***********************************************************/
+  #course {
+    position: relative;
+    width: 100%;
+    height: 850px;
+    text-align: center;
+  }
+  #back-color {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #F0F5E1;
+    z-index: -3;
   }
   .bgicon {
     position: absolute;
     right: 0;
-    bottom: 100px;
+    bottom: 50px;
     z-index: -1;
   }
-  #h1_back {
+  #h1-back {
+    position: absolute;
     font-size: 133.94px;
     font-style: "Merriweather Sans";
     color: #EBF0DC;
-    position: absolute;
-    left: 50px;
-    top: 200px;
+    top: 8%;
+    left: 5%;
     z-index: -2;  
   }
+  /* テーブル関係 */
+  #course-table {
+    margin: 80px auto;
+  }
+  .course-img {
+    border-radius: 5%;
+    margin: 0 40px;
+  }
+  .list-name {
+    margin: 20px 0 10px 0;
+  }
+  .course-list {
+    text-align: left;
+    margin: 0 40px;
+    line-height: 2em;
+  }
+  /* リンク関係 */
+  #course-link{
+    margin: 0px auto 0 auto;
+  }
 
-/* お客様の声の設定 */
+/* お客様の声の設定 ***********************************************************/
   #voice {
-    width: 1280px; 
-    top: 900px;
-    background-color: #ffffff;
+    position: relative;
+    width: 100%;
     text-align: center;
   }
-
-/* アクセスの設定 */
-  #access {
-    width: 100%; 
-    top: 900px;
-    background-color: #F0F5E1;
+  #voice-title-box {
+    position: absolute;
+    display: table-cell;
+    width: 800px;
+    height: 200px;
+    left: 0;
+    right: 0;
+    top: 200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    clip-path: circle(300px at 50% 150%);
+    z-index: 10;
   }
-
+  #voice-title {
+    margin-top: 80px;
+  }
+  /* テーブル内設定 */
+  #voice-table {
+    width: 80%;
+    margin: 130px auto 0 auto;
+  }
+  .voice-table-items {
+    vertical-align: top;
+  }
   .voice_img {
     border-radius: 50%;
   }
+  .voice-table-items > h3 {
+    margin: 30px 0;
+  }
+  .voice-table-items > p {
+    text-align: left;
+    margin: 0 40px;
+  }
+  #voice-link {
+    margin: 80px auto 50px auto;
+  }
+
+  /* アクセスの設定 ***********************************************************/
+  #access {
+    width: 100%;
+    /* top: 900px; */
+    background-color: #F0F5E1;
+  }
+  #access-title-box {
+    position: relative;
+    width: 100%;
+    height: 80px;
+  }
+  #access-title {
+    position: absolute;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+  }
+  #access-table {
+    width: 80%;
+    margin: 30px auto 0 auto;
+  }
+  #access-left {
+    position: relative;
+    vertical-align: top;
+  }
+  .access-left-info {
+    margin: 30px 0;
+  }
+  #access-schedule {
+    width: 450px;
+  }
+  #access-schedule tr th {
+    color: #ffffff;
+    background-color: #1B9240;
+  }
+  #access-schedule tr td {
+    color: #1B9240;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .access-time {
+    width: 120px;
+  }
+
+  /* ナビゲーションのリンクの装飾設定 */
+  #access-link {
+    width: 100%;
+  }
+  #access-link > a {
+    text-decoration: none;
+    border: 1px solid #1B9240;
+    color: #ffffff;
+    border-radius: 7px;
+    padding: 10px 15px 10px 15px;
+    background-color: #1B9240;
+    line-height: 80px;
+  }
+  #access-link > a:link {color: #ffffff;}
+  #access-link > a:visited {color:  #ffffff;}
+  #access-link > a:hover {color: #0C4324 }
+  #access-link > a:active {
+    border: 1px solid #1B9240;
+    color:  #1B9240; 
+    background-color: #ffffff;
+    }
+
+
+
+/* Footerの設定 ***********************************************************/
+  footer {
+    background-color: #F0F5E1;
+    position: relative;
+    width: 100%;
+  }
+  #footer-nav {
+    width: 80%;
+    margin: 0 auto 0 auto;
+    padding: 100px 0 50px 0;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+  }
+  #footer-nav-pc{
+    display: flex;
+    width: 60%;
+    color: #ffffff;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 20px;
+  }
+
+  /* ナビゲーションのリンクの装飾設定 */
+  #footer-nav-pc > a {
+    text-decoration: none;
+    color: #000000;
+  }
+  #footer-nav-pc > a:link {color: #000000;}
+  #footer-nav-pc > a:visited {color:  #000000;}
+  #footer-nav-pc > a:hover {color: #1B9240;}
+  #footer-nav-pc > a:active {color:  #000000;}
+
+  #footer-bottom {
+    width: 100%;
+    background-color: #1B9240;
+    color:#ffffff;
+    text-align: center;
+  }
+}
+

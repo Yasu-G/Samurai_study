@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+}
+
+/* PC、スマホ共通スタイル */
+  h2{
+    font-family: "Noto Sans CJK JP";
+    font-size: 32px;
+    color: #468459;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+  }
+  h3 {
+    font-family: "Noto Sans CJK JP";
+    font-size: 24px;
+    color: #468459;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+  }
+  .dark-green {
+    color: #0C4324;
+  }
+  p{
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+  }
+
+/* ********************************************************** */
+/* PCの設定 */
+@media screen and (min-width: 768px){
+/************************************************************/
+  body {
+    position: relative;
+    margin: 0 auto;
+    width: 1280px;
+  }
+  /* header ******************************/
+  header {
+    top: 10px;
+    width: 100%;
+    flex-wrap: nowrap;
+    display: flex;
+    z-index: 10;
+    justify-content: space-between;
+  }
+  #logo {
+    left: 0;
+    width: 240px;
+    height: 32px;
+    margin-left: 20px;
+  }
+  #nav-pc{
+    display: flex;
+    width: 60%;
+    color: #0C4324;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 20px;
+  }
+
+/* ナビゲーションのリンクの装飾設定 */
+  #nav-pc > a {
+    text-decoration: none;
+  }
+  #nav-pc > a:link {color: #0C4324;}
+  #nav-pc > a:visited {color:#0C4324;}
+  #nav-pc > a:hover {color: #000000;}
+  #nav-pc > a:active {color:#0C4324;}
+
+  #nav-pc > #reservation {
+    background-color: #0C4324;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 7px;
+  }
+  #nav-pc > #reservation:link {color: #ffffff;}
+  #nav-pc > #reservation:visited {color:#ffffff;}
+  #nav-pc > #reservation:hover {color: #000000;}
+  #nav-pc > #reservation:active {color:#EBF0DC;}
+}

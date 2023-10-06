@@ -1,0 +1,272 @@
+<!--*****************************
+  # 整骨院Web ページ構成
+  - トップページ (index.html#top)
+  - 当院について (about.html)
+  - コース・料金 (price.html)
+  - お知らせ (news.html)
+  - お知らせ詳細 (page-name.html)
+  - お客様の声 (voice.html)
+  - ご予約・お問合せサンクスページ (contact-thanks.html)  
+    
+  # トップページ 構成
+  - header
+  - ホーム (id="home")
+  - お知らせ (id="news")
+  - Concept (id="about")
+  - コース料金 (id="course")
+  - お客様の声 (id="voice")
+  - アクセス (id="access") 
+  - footer (id="footer")
+*****************************-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>SAMURAI整体院（当院について）</title>
+  <meta name="description" content="SAMURAI整体院の「当院について」ページです">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="course-style.css">
+
+  <!-- フォントの読み込み -->
+    <!-- Shippori Mincho -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet">
+    <!--  Merriweather Sans -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Merriweather+Sans&family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet">
+    <!-- Noto Sans JP -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Merriweather+Sans&family=Noto+Sans+JP&family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet">
+
+  <!-- slickの読み込み -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+</head>
+<body>
+
+<!--header nav**********************************************************-->
+  <header>
+        <img id="logo" src="img/Frame 2259.png" alt="logo">
+      <nav id="nav-pc">
+        <a href="index.thtml">ホーム </a>
+        <a href="about.html">当院について </a> 
+        <a href="price.html">コース・料金 </a> 
+        <a href="news.html">お知らせ </a>
+        <a href="voice.html">お客様の声 </a>
+        <a id="reservation" href="contact-thanks.html">ご予約・お問合せ </a>
+      </nav>
+  </header>
+  
+  <main>
+  <article>
+<!--ホーム**********************************************************-->
+  <section id="home">
+    <div id="home-message" >
+      <h1>Price</h1>
+      <h2>コース・料金</h2>
+    </div>
+    <div id="top-img-div" >
+      <img id="top-img" src="img/Courseprice.jpg" alt="About-img">
+    </div>
+    <div id="back-img"></div>
+    <img id="back-green02" src="img/x32_1.png" alt="back-green02">
+  </section>
+
+<!--パンくずリスト**********************************************************-->
+  <section id="pan-list">
+    <span>ホーム ＞</span>
+    <span id="pan-here">コース・料金</span>
+  </section>
+
+<!-- コース・料金 **********************************************************--> 
+<section id="course">
+  <div id="course-title-box">
+    <h3 id="course-title">
+      <img src="img/Frame 2122.png">
+      <span> コース・料金</span>
+      <img src="img/Frame 2564.png">
+      <span><br><br>当院では保険診療、自費診療<br>ともにご対応しております</span>
+    </h3>
+  </div>
+  <table id="course-table">
+    <tr>
+      <td>
+        <img class="course-img" src="img/TOP-insurance1.jpg" alt="保険診療写真">
+        <div class="course-list">
+          <h3 class="dark-green list-name">保険診療</h3>
+          <ul>
+            <li>骨折・打撲・捻挫・脱臼</li>
+            <li>スポーツ診療</li>
+            <li>交通事故</li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <img class="course-img" src="img/TOP-self1.jpg" alt="自賠責診療写真">
+        <div class="course-list">
+          <h3 class="dark-green list-name">自賠責診療</h3>
+          <ul>
+            <li>腰痛・肩こり</li>
+            <li>冷え性・だるさ</li>
+            <li>骨盤・背骨矯正</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </table>
+</section>
+
+
+<!-- 保険診療 **********************************************************--> 
+  <section id="insurance">
+    <table id="insurance-table">
+      <tr><td id="insurance-left">
+        <div>
+          <p id="insurance-title">
+            <img src="img/BGicon.png" alt="Insurance-title-img">
+            <span>Insurance<br>保険診療</span>
+          </p>
+          <p id="insurance-message"><br>健康保険の適用は、慢性化していない、急性のけがのみが対象となります。
+            <br>「負傷原因が急性または亜急性（急性に準ずる）の外傷性の負傷」のみです。</p>
+          <ul id="insurance-list">
+            <li>骨折・打撲・捻挫・脱臼</li>
+            <li>スポーツ診療</li>
+            <li>交通事故</li>
+          </ul>
+        </div> 
+      </td>
+      <td id="insurance-img" >
+        <img class="insurance-img" src="img/TOP-insurance2.jpg">
+      </td></tr>
+    </table>
+  </section>
+
+<!-- 自費診療 **********************************************************--> 
+<section id="selfpay">
+  <table id="selfpay-table">
+    <tr><td id="selfpay-left">
+      <div>
+        <p id="selfpay-title">
+          <img src="img/BGicon.png" alt="selfpay-title-img">
+          <span>Self-pay<br>自費診療</span>
+        </p>
+        <p id="selfpay-message">慢性的なご症状、日常生活の疲労やご年齢により生じる痛み緩和の施術は
+          健康保険の適用がなく、全額自己負担となります。</p>
+        <ul id="selfpay-list">
+          <li>腰痛・肩こり</li>
+          <li>冷え性・だるさ</li>
+          <li>骨盤・背骨矯正</li>
+        </ul>
+        <p id="selfpay-cost">初回　8,800円（税込） / 50分
+          <br>2回目以降　6,600円（税込） / 30分</p>
+      </div> 
+    </td>
+    <td id="selfpay-img" >
+      <img class="selfpay-img" src="img/TOP-self2.jpg">
+    </td></tr>
+  </table>
+</section>
+
+  <!-- wave 2**********************************************************--> 
+  <section id="wave">
+    <div id="green-circle"></div>
+    <div id="green2-circle"></div>
+    <div id="white-circle"></div>
+    <div id="white2-circle"></div>
+    <div id="white-back"></div>
+    <div id="green-back"></div>
+  </section>
+
+<!-- アクセス **********************************************************--> 
+  <section id="access"> 
+    <div id="access-title-box">
+      <h3 id="access-title">
+        <img src="img/Frame 2122.png">
+        <span>お気軽にご来院ください</span>
+        <img src="img/Frame 2564.png">
+      </h3>
+    </div>
+    <table id="access-table">
+      <tr>
+        <td id="access-left">
+          <h3 class="access-left-info">JR「秋葉原駅」より徒歩1分</h3>
+          <p class="access-left-info">
+            〒101-0022
+            <br>東京都千代田区神田練塀町300番地
+            <br>住友不動産秋葉原駅前ビル 5F
+          </p>
+          <h3 class="access-left-info">tel: 03-1234-5678</h3>
+          <table id="access-schedule" class="access-left-info">
+            <tr>
+              <th>営業時間</th>
+              <th>月</th>
+              <th>火</th>
+              <th>水</th>
+              <th>木</th>
+              <th>金</th>
+              <th>土</th>
+              <th>日</th>
+            </tr>
+            <tr>
+              <td class="access-time">9:00〜12:30</td>
+              <td>●</td>
+              <td>●</td>
+              <td>-</td>
+              <td>●</td>
+              <td>●</td>
+              <td>●</td>
+              <td>●</td>
+            </tr>
+            <tr>
+              <td class="access-time">9:00〜12:30</td>
+              <td>●</td>
+              <td>●</td>
+              <td>-</td>
+              <td>●</td>
+              <td>●</td>
+              <td>●</td>
+              <td>●</td>
+            </tr>
+          </table>
+          <div id="access-link">
+            <a href="contact-thanks.html">ご予約・お問合せはこちらから</a> 
+          </div>
+        </td>
+        <td>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.06039488223!2d139.77214334089803!3d35.70013137269525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ea7ba1a054d%3A0x81605e8b12064e47!2z44CSMTAxLTAwMjIg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy656We55Sw57e05aGA55S6MzAw55Wq5Zyw!5e0!3m2!1sja!2sjp!4v1696363755519!5m2!1sja!2sjp" width="510" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </td>  
+      </tr>
+    </table>
+  </section>
+  </article>
+  </main>
+  <footer>
+    <div id="footer-nav">
+      <img id="logo" src="img/Frame 2259.png" alt="logo">
+      <nav id="footer-nav-pc">
+        <a href="index.html">ホーム </a>
+        <a href="about.html">当院について </a> 
+        <a href="price.html">コース・料金 </a> 
+        <a href="news.html">お知らせ </a>
+        <a href="voice.html">お客様の声 </a>
+        <a href="contact-thanks.html">ご予約・お問合せ </a>
+      </nav>
+    </div>
+    <p id="footer-bottom">©︎2023 SAMURAI整体院</p>
+  </footer>
+
+  <!-- jQuery設定 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- slickの読み込み -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
