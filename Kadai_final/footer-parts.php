@@ -1,13 +1,13 @@
 
-<link rel="stylesheet" href="../css/style-footer.css">
+<link rel="stylesheet" href="css/style-footer-parts.css">
     
 <!-- アクセス **********************************************************--> 
 <section id="access"> 
   <div id="access-title-box">
     <h3 id="access-title">
-      <img src="../img/Frame 2122.png">
+      <img src="img/Frame 2122.png">
       <span>お気軽にご来院ください</span>
-      <img src="../img/Frame 2564.png">
+      <img src="img/Frame 2564.png">
     </h3>
   </div>
   <table id="access-table">
@@ -63,15 +63,23 @@
   </table>
 </section>
 </article>
+
+<link rel="stylesheet" href="css/style-top.css">
+
+<a id="top-btn"  href="#html-top">
+  <img src="img/btn_01.png">
+</a>
+
 </main>
+
 <footer>
   <div id="footer-nav">
-    <img id="logo" src="../img/Frame 2259.png" alt="logo">
+    <img id="logo" src="img/Frame 2259.png" alt="logo">
     <nav id="footer-nav-pc">
       <a href="index.html">ホーム </a>
-      <a href="about.html">当院について </a> 
-      <a href="course.html">コース・料金 </a> 
-      <a href="news.html">お知らせ </a>
+      <a href="about.php">当院について </a> 
+      <a href="price.php">コース・料金 </a> 
+      <a href="information.php">お知らせ </a>
       <a href="voice.html">お客様の声 </a>
       <a href="contact-thanks.html">ご予約・お問合せ </a>
     </nav>

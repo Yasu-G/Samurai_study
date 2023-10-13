@@ -1,5 +1,8 @@
+/* rest css入れる方がいい */
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* PC、スマホ共通スタイル */
@@ -40,20 +43,22 @@
     margin: 0 auto;
     width: 1280px;
   }
+  main {
+    position: relative;
+  }
   /* header ******************************/
   header {
-    top: 10px;
     width: 100%;
     flex-wrap: nowrap;
     display: flex;
     z-index: 10;
     justify-content: space-between;
+    padding: 10px 20px;
   }
   #logo {
     left: 0;
     width: 240px;
     height: 32px;
-    margin-left: 20px;
   }
   #nav-pc{
     display: flex;
@@ -61,7 +66,6 @@
     color: #0C4324;
     align-items: center;
     justify-content: space-around;
-    margin-right: 20px;
   }
 
 /* ナビゲーションのリンクの装飾設定 */

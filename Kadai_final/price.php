@@ -3,17 +3,20 @@
 *****************************-->
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" id="html-top">
 
-<?php include ('parts/head.php'); ?>
+<link rel="stylesheet" href="css/style-price.css">
+
+<?php include ('head-parts.html'); ?>
 
 <body>
 
 <!--header nav**********************************************************-->
-<?php include ('parts/header.php'); ?>
+<?php include ('header-parts.html'); ?>
   
-  <main>
+<main>
   <article>
+    
 <!--ホーム**********************************************************-->
   <section id="home">
     <div id="home-message" >
@@ -74,9 +77,9 @@
 
 <!-- 保険診療 **********************************************************--> 
   <section id="insurance">
-    <table id="insurance-table">
-      <tr><td id="insurance-left">
-        <div>
+    <div id="insurance-table">
+
+        <div id="insurance-left">
           <p id="insurance-title">
             <img src="img/BGicon.png" alt="Insurance-title-img">
             <span>Insurance<br>保険診療</span>
@@ -88,51 +91,46 @@
             <li>スポーツ診療</li>
             <li>交通事故</li>
           </ul>
-        </div> 
-      </td>
-      <td id="insurance-img" >
-        <img class="insurance-img" src="img/TOP-insurance2.jpg">
-      </td></tr>
-    </table>
+        </div>
+
+        <div id="insurance-img" >
+          <img class="insurance-img" src="img/TOP-insurance2.jpg">
+        </div>
+  
+    </div>
   </section>
 
 <!-- 自費診療 **********************************************************--> 
 <section id="selfpay">
-  <table id="selfpay-table">
-    <tr><td id="selfpay-left">
-      <div>
-        <p id="selfpay-title">
-          <img src="img/BGicon.png" alt="selfpay-title-img">
-          <span>Self-pay<br>自費診療</span>
-        </p>
-        <p id="selfpay-message">慢性的なご症状、日常生活の疲労やご年齢により生じる痛み緩和の施術は
-          健康保険の適用がなく、全額自己負担となります。</p>
-        <ul id="selfpay-list">
-          <li>腰痛・肩こり</li>
-          <li>冷え性・だるさ</li>
-          <li>骨盤・背骨矯正</li>
-        </ul>
-        <p id="selfpay-cost">初回　8,800円（税込） / 50分
-          <br>2回目以降　6,600円（税込） / 30分</p>
-      </div> 
-    </td>
-    <td id="selfpay-img" >
+  <div id="selfpay-table">
+
+    <div id="selfpay-left">
+      <p id="selfpay-title">
+        <img src="img/BGicon.png" alt="selfpay-title-img">
+        <span>Self-pay<br>自費診療</span>
+      </p>
+      <p id="selfpay-message">慢性的なご症状、日常生活の疲労やご年齢により生じる痛み緩和の施術は
+        健康保険の適用がなく、全額自己負担となります。</p>
+      <ul id="selfpay-list">
+        <li>腰痛・肩こり</li>
+        <li>冷え性・だるさ</li>
+        <li>骨盤・背骨矯正</li>
+      </ul>
+      <p id="selfpay-cost">初回　8,800円（税込） / 50分
+        <br>2回目以降　6,600円（税込） / 30分</p>
+    </div>
+
+    <div id="selfpay-img" >
       <img class="selfpay-img" src="img/TOP-self2.jpg">
-    </td></tr>
-  </table>
+    </div>
+
+  </div>
 </section>
 
-  <!-- wave 2**********************************************************--> 
-  <section id="wave">
-    <div id="green-circle"></div>
-    <div id="green2-circle"></div>
-    <div id="white-circle"></div>
-    <div id="white2-circle"></div>
-    <div id="white-back"></div>
-    <div id="green-back"></div>
-  </section>
 
-  <?php include('/parts/footer.php'); ?>
+<?php include ('wave-parts.html'); ?>
+<?php include ('footer-parts.html'); ?>
+<?php include ('top.html'); ?>
   
 </body>
 </html>

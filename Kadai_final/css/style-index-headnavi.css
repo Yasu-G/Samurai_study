@@ -1,0 +1,26 @@
+
+/* ********************************************************** */
+/* PCの設定 */
+@media screen and (min-width: 768px){
+/************************************************************/
+  /* header ******************************/
+  header {
+    position: absolute;
+    top: 0px;
+  }
+
+/* ナビゲーションのリンクの装飾設定 */
+  #nav-pc > a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  #nav-pc > a:link {color: #ffffff;}
+  #nav-pc > a:visited {color: #ffffff;}
+  #nav-pc > a:hover {color: #000000;}
+  #nav-pc > a:active {color: #ffffff;}
+  
+  #reservation {
+    background-color: #0C4324;
+    padding: 5px 10px;
+    border-radius: 7px;
+  }}
