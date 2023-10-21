@@ -1,0 +1,123 @@
+/* ********************************************************** */
+/* PCの設定 */
+@media screen and (min-width: 768px){
+/************************************************************/
+
+
+/* お知らせ ***********************************************************/
+
+  #information-frame {
+    margin: 80px 10% 50px 10%;
+    position: relative;
+    display: flex;
+  }
+  .posting-item {
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .posting-item >div {
+    margin-left: 10px;
+  }
+  .posting-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height:1.2em;
+  }
+  .posting-img {
+    width: 40%;
+    border-radius: 5%;
+  }
+  .posting-date {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .open-date {
+    text-align: center;
+    font-size: 14px;
+    padding:2px 10px;
+    margin-left: 20px;
+    color: #ffffff;
+    background-color: #468459;
+    border-radius: 5px;
+  }
+  #category-items {
+    width: 300px;
+  }
+  #category-items >h3 {
+  color: #000000;
+  }
+  #category-items >div {
+    margin-top: 20px;
+  }
+  #category-items >div >p {
+    font-size: 18px;
+    color: #000000;
+    line-height:2em;
+  }
+}
+
+
+
+
+/* ********************************************************** */
+/* スマホの設定 */
+@media screen and (max-width: 767px){
+  /************************************************************/
+  
+  
+  /* お知らせ ***********************************************************/
+  
+    #information-frame {
+      width: 90%;
+      margin: 80px auto 50px auto;
+      position: relative;
+    }
+    .posting-item {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    .posting-item >div {
+      margin-left: 10px;
+    }
+    .posting-title {
+      padding-top: 30px;
+      font-size: 24px;
+      font-weight: bold;
+      line-height:1.2em;
+    }
+    .posting-img {
+      display: block;
+      width: 100%;
+      border-radius: 10%;
+    }
+    .posting-date {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .open-date {
+      text-align: center;
+      font-size: 14px;
+      padding:2px 10px;
+      margin-left: 20px;
+      color: #ffffff;
+      background-color: #468459;
+      border-radius: 5px;
+    }
+    #category-items {
+      width: 300px;
+    }
+    #category-items >h3 {
+    color: #000000;
+    }
+    #category-items >div {
+      margin-top: 20px;
+    }
+    #category-items >div >p {
+      font-size: 18px;
+      color: #000000;
+      line-height:2em;
+    }
+  }
+  
+  

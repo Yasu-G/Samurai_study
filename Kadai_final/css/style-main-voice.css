@@ -1,0 +1,60 @@
+/* ********************************************************** */
+/* PCの設定 */
+@media screen and (min-width: 768px){
+/************************************************************/
+
+/* お客様の声一覧 ***********************************************************/
+
+#voice-list {
+  margin-top: 100px;
+}
+
+.voice-item {
+  display: flex;
+  margin: 50px 200px 50px 150px;
+  align-items: center;
+}
+.voice-img {
+  border-radius: 50%;
+}
+.voice-comment {
+  margin-left: 50px;
+}
+.voice-comment >p {
+  margin-top: 20px;
+}
+}
+
+
+
+/* ********************************************************** */
+/* スマホの設定 */
+@media screen and (max-width: 767px){
+  /************************************************************/
+  
+  /* お客様の声一覧 ***********************************************************/
+  
+  #voice-list {
+    width: 90%;
+    margin: 100px auto 0 auto;
+  }
+  .voice-item {
+    width: 100%;
+    margin: 50px  auto;
+  }
+  .voice-img {
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 50%;
+  }
+  .voice-comment {
+    margin-top: 50px;
+  }
+  .voice-comment >h3 {
+    width: 100%;
+    text-align: center;
+  }
+  .voice-comment >p {
+    margin-top: 20px;
+  }
+  }

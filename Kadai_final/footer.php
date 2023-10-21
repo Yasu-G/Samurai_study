@@ -1,6 +1,7 @@
 
-<link rel="stylesheet" href="css/style-footer-parts.css">
-    
+<!-- Footer CSS -->
+<link rel="stylesheet" href="css/style-parts-footer.css">
+
 <!-- アクセス **********************************************************--> 
 <section id="access"> 
   <div id="access-title-box">
@@ -12,7 +13,7 @@
   </div>
   <table id="access-table">
     <tr>
-      <td id="access-left">
+      <th id="access-left">
         <h3 class="access-left-info">JR「秋葉原駅」より徒歩1分</h3>
         <p class="access-left-info">
           〒101-0022
@@ -55,20 +56,14 @@
         <div id="access-link">
           <a href="contact-thanks.html">ご予約・お問合せはこちらから</a> 
         </div>
-      </td>
-      <td>
+      </th>
+      <th id="access-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.06039488223!2d139.77214334089803!3d35.70013137269525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ea7ba1a054d%3A0x81605e8b12064e47!2z44CSMTAxLTAwMjIg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy656We55Sw57e05aGA55S6MzAw55Wq5Zyw!5e0!3m2!1sja!2sjp!4v1696363755519!5m2!1sja!2sjp" width="510" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </td>  
-    </tr>
-  </table>
+      </th>  
+      </tr>
+    </table>
 </section>
 </article>
-
-<link rel="stylesheet" href="css/style-top.css">
-
-<a id="top-btn"  href="#html-top">
-  <img src="img/btn_01.png">
-</a>
 
 </main>
 
@@ -76,12 +71,14 @@
   <div id="footer-nav">
     <img id="logo" src="img/Frame 2259.png" alt="logo">
     <nav id="footer-nav-pc">
-      <a href="index.html">ホーム </a>
-      <a href="about.php">当院について </a> 
-      <a href="price.php">コース・料金 </a> 
-      <a href="information.php">お知らせ </a>
-      <a href="voice.html">お客様の声 </a>
-      <a href="contact-thanks.html">ご予約・お問合せ </a>
+      <ul>
+        <li><a href="index.php">ホーム </a></li>
+        <li><a href="about.php">当院について </a> </li>
+        <li><a href="price.php">コース・料金 </a> </li>
+        <li><a href="information.php">お知らせ </a></li>
+        <li><a href="voice.php">お客様の声 </a></li>
+        <li><a href="contact-thanks.php">ご予約・お問合せ </a></li>
+      </ul>
     </nav>
   </div>
   <p id="footer-bottom">©︎2023 SAMURAI整体院</p>
@@ -92,3 +89,6 @@
 <!-- slickの読み込み -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="script.js"></script>
+
+</body>
+</html>

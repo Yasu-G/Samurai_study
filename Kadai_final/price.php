@@ -2,31 +2,32 @@
   - コース・料金 (course.html)
 *****************************-->
 
-<!DOCTYPE html>
-<html lang="ja" id="html-top">
+<?php include ('header.php'); ?>
 
-<link rel="stylesheet" href="css/style-price.css">
+<!-- PRICE CSS -->
+<link rel="stylesheet" href="css/style-main-price.css">
+<link rel="stylesheet" href="css/style-parts-home.css">
 
-<?php include ('head-parts.html'); ?>
-
-<body>
-
-<!--header nav**********************************************************-->
-<?php include ('header-parts.html'); ?>
-  
 <main>
   <article>
     
 <!--ホーム**********************************************************-->
-  <section id="home">
+<section id="home">
     <div id="home-message" >
       <h1>Price</h1>
       <h2>コース・料金</h2>
     </div>
-    <div id="top-img-div" >
-      <img id="top-img" src="img/Courseprice.jpg" alt="About-img">
+
+    <div id="top-img-div">
+      <div id="back-img"></div>
+      <picture id="top-img-pct">
+      <!-- SP時画像 -->
+      <source media="(max-width: 767px)" srcset="img/SP-Courseprice.jpg" alt="Courseprice-img">
+      <!-- PC時画像 -->
+      <img src="img/Courseprice.jpg" alt="Courseprice-img">
+      </picture>
     </div>
-    <div id="back-img"></div>
+
     <img id="back-green02" src="img/x32_1.png" alt="back-green02">
   </section>
 
@@ -79,30 +80,34 @@
   <section id="insurance">
     <div id="insurance-table">
 
-        <div id="insurance-left">
-          <p id="insurance-title">
-            <img src="img/BGicon.png" alt="Insurance-title-img">
-            <span>Insurance<br>保険診療</span>
-          </p>
-          <p id="insurance-message"><br>健康保険の適用は、慢性化していない、急性のけがのみが対象となります。
-            <br>「負傷原因が急性または亜急性（急性に準ずる）の外傷性の負傷」のみです。</p>
-          <ul id="insurance-list">
-            <li>骨折・打撲・捻挫・脱臼</li>
-            <li>スポーツ診療</li>
-            <li>交通事故</li>
-          </ul>
-        </div>
+      <div id="insurance-img" >
+        <img class="insurance-img" src="img/TOP-insurance2.jpg">
+      </div>
 
-        <div id="insurance-img" >
-          <img class="insurance-img" src="img/TOP-insurance2.jpg">
-        </div>
-  
+      <div id="insurance-left">
+        <p id="insurance-title">
+          <img src="img/BGicon.png" alt="Insurance-title-img">
+          <span>Insurance<br>保険診療</span>
+        </p>
+        <p id="insurance-message"><br>健康保険の適用は、慢性化していない、急性のけがのみが対象となります。
+          <br>「負傷原因が急性または亜急性（急性に準ずる）の外傷性の負傷」のみです。</p>
+        <ul id="insurance-list">
+          <li>骨折・打撲・捻挫・脱臼</li>
+          <li>スポーツ診療</li>
+          <li>交通事故</li>
+        </ul>
+      </div>
+
     </div>
   </section>
 
 <!-- 自費診療 **********************************************************--> 
 <section id="selfpay">
   <div id="selfpay-table">
+
+    <div id="selfpay-img" >
+      <img class="selfpay-img" src="img/TOP-self2.jpg">
+    </div>
 
     <div id="selfpay-left">
       <p id="selfpay-title">
@@ -120,17 +125,13 @@
         <br>2回目以降　6,600円（税込） / 30分</p>
     </div>
 
-    <div id="selfpay-img" >
-      <img class="selfpay-img" src="img/TOP-self2.jpg">
-    </div>
 
   </div>
 </section>
 
 
 <?php include ('wave-parts.html'); ?>
-<?php include ('footer-parts.html'); ?>
 <?php include ('top.html'); ?>
+
+<?php include ('footer.php'); ?>
   
-</body>
-</html>

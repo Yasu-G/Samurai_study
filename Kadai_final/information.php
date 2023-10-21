@@ -2,18 +2,13 @@
   - お知らせ (information.html)
 *****************************-->
 
-<!DOCTYPE html>
-<html lang="ja" id="html-top">
 
-<link rel="stylesheet" href="css/style-information.css">
+<?php include ('header.php'); ?>
 
-<?php include ('head-parts.html'); ?>
+<!-- INFORMATION CSS -->
+<link rel="stylesheet" href="css/style-main-information.css">
+<link rel="stylesheet" href="css/style-parts-home.css">
 
-<body>
-
-<!--header nav**********************************************************-->
-<?php include ('header-parts.html'); ?>
-  
 <main>
   <article>
     
@@ -23,10 +18,17 @@
       <h1>Information</h1>
       <h2>お知らせ</h2>
     </div>
-    <div id="top-img-div" >
-      <img id="top-img" src="img/News.jpg" alt="News-img">
+
+    <div id="top-img-div">
+      <div id="back-img"></div>
+      <picture id="top-img-pct">
+      <!-- SP時画像 -->
+      <source media="(max-width: 767px)" srcset="img/SP-News.jpg" alt="News-img">
+      <!-- PC時画像 -->
+      <img src="img/News.jpg" alt="News-img">
+      </picture>
     </div>
-    <div id="back-img"></div>
+    
     <img id="back-green02" src="img/x32_1.png" alt="back-green02">
   </section>
 
@@ -91,8 +93,6 @@
 
 
 <?php include ('wave-parts.html'); ?>
-<?php include ('footer-parts.html'); ?>
 <?php include ('top.html'); ?>
-  
-</body>
-</html>
+
+<?php include ('footer.php'); ?>

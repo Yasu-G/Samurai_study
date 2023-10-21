@@ -1,9 +1,0 @@
-/* Top-button ******************************/
-#top-btn{
-  /* display: none; */
-
-  position: fixed;
-  bottom: 100px;
-  right: 100px;
-  z-index: 50;
-}

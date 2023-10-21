@@ -1,3 +1,15 @@
+ /*
+ Theme Name: Kadai_final
+ Theme URI: https://www.sejuku.net/
+ Description: SAMURAI ENGINEERのKadai_final
+ Version: 1.0.0
+ Author: SAMURAI ENGINEER
+ Author URI: https://www.sejuku.net/
+ */
+
+
+
+
 /* rest css入れる方がいい */
 * {
   margin: 0;
@@ -21,15 +33,17 @@
   position: absolute;
   writing-mode: vertical-rl;
   top: 25%;
-  left: 100px;
+  left: 8%;
   font-family: "Shippori Mincho";
   font-size: 28px;
   color: #1B9240;
   text-decoration:underline dotted;
   line-height:60px;
   letter-spacing: 0.3em;
+  z-index: 11;
 }
-#top-img-div {
+#top-img-pc {
+  display: block;
   position: absolute;
   top: 0;
   right: 0;
@@ -37,18 +51,9 @@
   z-index: -1;
   width: 100%;
   height: 100%;
-  /* background-color: yellow; */
 }
-.carousel {
-  /* position: relative; */
-  width: 100%;
-  height: 100%;
-  /* z-index: -1; */
-}
-.slick-list {
-  /* width: 100%; */
-  height: 100%;
-  /* object-fit: cover; */
+#top-img-sp {
+  display: none;
 }
 #back-img {
   position: absolute;
@@ -62,37 +67,69 @@
 }
 #back-green01 {
   position: absolute;
-  z-index: -3;
+  z-index: 0;
   top: 10%;
-  left: 100px;
+  left: 10%;
 }
 #back-green02 {
   position: absolute;
-  z-index: -3;
+  z-index: 0;
   top: 55%;
   left: 30px;
+}
+
+/* .carousel Slickの設定 ******************************/
+.slick-list {
+  height: 100%;
+}
+/* Slickの位置を変える */
+.slick-dots {
+  bottom: 15%!important;
+  text-align: right;
+  padding-right: 10%;
+}
+/* Slickの大きさ、色を変える */
+.slick-dots li {
+  width: 30px!important;
+  height: 10px!important;
+  margin: 0!important;
+  background-color: #ffffff;
+}
+  /*Slickドットを変える */
+.slick-dots li button::before {
+  width: 100% !important;
+  height: 100% !important;
+  content: "" !important;
+}
+/* Slickがアクティブなものの設定 */
+.slick-dots li.slick-active button::before {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #0C4324;
 }
   /* ニュースの設定***********************************************************/
   #news {
     position: relative;
-    width: 100%;
-    margin: 18px 0px 0 0px;
+    width: 94%;
+    margin: 18px auto 0 auto;
     display: flex;
     font-family: "Noto Sans JP";
     align-items: center;
+    justify-content: space-between;
   }
-  #news-sec01{
-    margin-left: 100px;
+  #news-sec01 {
+    display: flex;
+    align-items: baseline;
   }
   #news-sec02{
-    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    margin-right: 15%;
   }
-  #news-link{
-    text-align: right;
-    margin-right: 100px;
-    position: absolute;
-    right: 0;
+  #news-sec02 >div{
+    display: flex;
   }
+
     /* ナビゲーションのリンクの装飾設定 */
     #news-link > a {text-decoration: none;}
     #news-link > a:link {color: #000000;}
@@ -107,17 +144,18 @@
     font-weight: bold;
   }
   #news02{
-    margin-left: 10px;
+    margin-left: 0.5em;
     font-size: 18px;
     color: #1B9240;
   }
   #news03{
-    margin-left: 30px;
+    margin-left: 2em;
     font-size: 16px;
     color: #000000;
+    padding: 0.3em 0;
   }
   #news04{
-    margin-left: 10px;
+    margin-left: 1em;
     font-size: 14px;
     color: #ffffff;
     background-color: #0C4324;
@@ -125,21 +163,22 @@
     border-radius: 7px;
   }
   #news05{
-    margin-left: 10px;
+    margin-left: 1em;
     font-size: 16px;
     color: #000000;
+    padding: 5px 0;
   }
 
 /* コンセプトの設定 ***********************************************************/
   #about {
     width: 100%; 
-    height: 700px;
+    /* height: 700px; */
     position: relative;
   }
   #about-bigicon {
     position: absolute;
     z-index: -1;
-    bottom: 0px;
+    bottom: 20px;
     right: 0px;
   }
   #about-h1back{
@@ -147,17 +186,15 @@
     font-size: 133.94px;
     font-family: "Merriweather Sans";
     color: #f7f9f7;
-    ;
     top: 8%;
     left: 5%;
     z-index: -2;
   }
   #about-table {
-    width: 68%;
-    margin:120px auto;
-  }
-  #about-table >div {
+    width: 80%;
+    margin:120px auto 30px auto;
     display: flex;
+    justify-content: space-between;
     flex-direction: row-reverse; /*ひっくり返すコマンド*/
   }
   #about-left {
@@ -173,13 +210,16 @@
   #about-message {
     margin-top: 20px;
     line-height: 1.8em;
+    width: 70%;
   }
   #about-comment {
+    width: 80%;
+    text-align: left;
     margin-top: 20px;
   }
   #about-link{
-    position: absolute;
-    right: 0;
+    width: 80%;
+    text-align: right;
     margin-top: 50px;
   }
 
@@ -204,34 +244,28 @@
   #about-img {
     vertical-align: top;
   }
-  .about-img {
-    margin: 5px 0 50px 80px;
-  }
+
 
 /* コース・料金の設定 ***********************************************************/
   #course {
     position: relative;
     width: 100%;
-    height: 850px;
+    /* height: 850px; */
     text-align: center;
-  }
-  #back-color {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    padding: 70px 0 150px 0;
     background-color: #F0F5E1;
     z-index: -3;
   }
-  .bgicon {
+  .course-bigicon {
     position: absolute;
     right: 0;
-    bottom: 50px;
+    bottom: 5%;
     z-index: -1;
   }
   #h1-back {
     position: absolute;
     font-size: 133.94px;
-    font-style: "Merriweather Sans";
+    font-family: "Merriweather Sans";
     color: #EBF0DC;
     top: 8%;
     left: 5%;
@@ -242,8 +276,9 @@
     margin: 80px auto;
   }
   .course-img {
+    width: 90%;
     border-radius: 5%;
-    margin: 0 40px;
+    margin: 0 0;
   }
   .list-name {
     margin: 20px 0 10px 0;
@@ -264,31 +299,43 @@
     width: 100%;
     text-align: center;
   }
+  #bottom-img-pc {
+    display: block;
+  }
+  #bottom-img-sp {
+    display: none;
+  }
   #voice-title-box {
-    position: absolute;
-    display: table-cell;
-    width: 800px;
+    position: relative;
+    width: 100%;
     height: 200px;
     left: 0;
     right: 0;
-    top: 200px;
+    top: -100px;
     margin: 0 auto;
     background-color: #ffffff;
     clip-path: circle(300px at 50% 150%);
     z-index: 10;
   }
   #voice-title {
-    margin-top: 80px;
+    position: absolute;
+    margin: 0 auto 0 auto;
+    width: 100%;
+    top: 60px;
   }
   /* テーブル内設定 */
   #voice-table {
+    position: relative;
+    top: -30px;
     width: 80%;
-    margin: 130px auto 0 auto;
+    margin: 0px auto 0 auto;
+    table-layout: fixed;
   }
   .voice-table-items {
     vertical-align: top;
   }
   .voice_img {
+    width: 95%;
     border-radius: 50%;
   }
   .voice-table-items > h3 {
@@ -299,8 +346,11 @@
     margin: 0 40px;
   }
   #voice-link {
-    margin: 80px auto 50px auto;
+    margin: 80px auto 0px auto;
   }
 
+
 }
+
+
 
