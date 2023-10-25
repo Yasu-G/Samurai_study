@@ -39,10 +39,11 @@ header {
 }
 #back-img {
   position: absolute;
-  width: 75%;
+  width: 90%;
   height: 100%;
+  right: 0;
   background-color: #F0F5E1;
-  clip-path: circle(700px at 100% 40%);
+  clip-path: circle(700px at 74% 40%);
   z-index: -2;
 }
 #top-img-pct{

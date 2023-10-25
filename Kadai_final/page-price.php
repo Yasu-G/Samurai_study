@@ -1,12 +1,17 @@
-<!--*****************************
-  - コース・料金 (course.html)
-*****************************-->
+<!-- ***************************** -->
+<!--
+Template Name: コース・料金 (course)
+-->
+<!-- ***************************** -->
 
-<?php include ('header.php'); ?>
+
+<?php get_header();?>
 
 <!-- PRICE CSS -->
-<link rel="stylesheet" href="css/style-main-price.css">
-<link rel="stylesheet" href="css/style-parts-home.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-main-price.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-unit-home.css">
+
+<?php include ('unit-header-nav.php'); ?>
 
 <main>
   <article>
@@ -22,13 +27,13 @@
       <div id="back-img"></div>
       <picture id="top-img-pct">
       <!-- SP時画像 -->
-      <source media="(max-width: 767px)" srcset="img/SP-Courseprice.jpg" alt="Courseprice-img">
+      <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/SP-Courseprice.jpg" alt="Courseprice-img">
       <!-- PC時画像 -->
-      <img src="img/Courseprice.jpg" alt="Courseprice-img">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/Courseprice.jpg" alt="Courseprice-img">
       </picture>
     </div>
 
-    <img id="back-green02" src="img/x32_1.png" alt="back-green02">
+    <img id="back-green02" src="<?php echo get_template_directory_uri(); ?>/images/x32_1.png" alt="back-green02">
   </section>
 
 <!--パンくずリスト**********************************************************-->
@@ -41,16 +46,16 @@
 <section id="course">
   <div id="course-title-box">
     <h3 id="course-title">
-      <img src="img/Frame 2122.png">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/Frame 2122.png">
       <span> コース・料金</span>
-      <img src="img/Frame 2564.png">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/Frame 2564.png">
       <span><br><br>当院では保険診療、自費診療<br>ともにご対応しております</span>
     </h3>
   </div>
   <table id="course-table">
     <tr>
       <td>
-        <img class="course-img" src="img/TOP-insurance1.jpg" alt="保険診療写真">
+        <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/images/TOP-insurance1.jpg" alt="保険診療写真">
         <div class="course-list">
           <h3 class="dark-green list-name">保険診療</h3>
           <ul>
@@ -61,7 +66,7 @@
         </div>
       </td>
       <td>
-        <img class="course-img" src="img/TOP-self1.jpg" alt="自賠責診療写真">
+        <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/images/TOP-self1.jpg" alt="自賠責診療写真">
         <div class="course-list">
           <h3 class="dark-green list-name">自賠責診療</h3>
           <ul>
@@ -81,12 +86,12 @@
     <div id="insurance-table">
 
       <div id="insurance-img" >
-        <img class="insurance-img" src="img/TOP-insurance2.jpg">
+        <img class="insurance-img" src="<?php echo get_template_directory_uri(); ?>/images/TOP-insurance2.jpg">
       </div>
 
       <div id="insurance-left">
         <p id="insurance-title">
-          <img src="img/BGicon.png" alt="Insurance-title-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/BGicon.png" alt="Insurance-title-img">
           <span>Insurance<br>保険診療</span>
         </p>
         <p id="insurance-message"><br>健康保険の適用は、慢性化していない、急性のけがのみが対象となります。
@@ -106,12 +111,12 @@
   <div id="selfpay-table">
 
     <div id="selfpay-img" >
-      <img class="selfpay-img" src="img/TOP-self2.jpg">
+      <img class="selfpay-img" src="<?php echo get_template_directory_uri(); ?>/images/TOP-self2.jpg">
     </div>
 
     <div id="selfpay-left">
       <p id="selfpay-title">
-        <img src="img/BGicon.png" alt="selfpay-title-img">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/BGicon.png" alt="selfpay-title-img">
         <span>Self-pay<br>自費診療</span>
       </p>
       <p id="selfpay-message">慢性的なご症状、日常生活の疲労やご年齢により生じる痛み緩和の施術は
@@ -130,8 +135,8 @@
 </section>
 
 
-<?php include ('wave-parts.html'); ?>
-<?php include ('top.html'); ?>
+<?php include ('unit-wave-parts.php'); ?>
+<?php include ('unit-top.php'); ?>
 
-<?php include ('footer.php'); ?>
+<?php get_footer();?>
   

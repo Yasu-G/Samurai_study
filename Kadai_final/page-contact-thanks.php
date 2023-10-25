@@ -1,12 +1,17 @@
-<!--*****************************
-  - お客様の声 (Contact)
-*****************************-->
+<!-- ***************************** -->
+<!--
+Template Name: ご予約・お問い合わせ (Contact)
+-->
+<!-- ***************************** -->
 
-<?php include ('header.php'); ?>
+
+<?php get_header();?>
 
 <!-- CONTACT-THANCKS CSS -->
-<link rel="stylesheet" href="css/style-main-conract-thanks.css">
-<link rel="stylesheet" href="css/style-parts-home.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-main-conract-thanks.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-unit-home.css">
+
+<?php include ('unit-header-nav.php'); ?>
 
 <main>
   <article>
@@ -22,13 +27,13 @@
       <div id="back-img"></div>
       <picture id="top-img-pct">
       <!-- SP時画像 -->
-      <source media="(max-width: 767px)" srcset="img/SP-Reserve.jpg" alt="Reserve-img">
+      <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/SP-Reserve.jpg" alt="Reserve-img">
       <!-- PC時画像 -->
-      <img src="img/Reserve.jpg" alt="Reserve-img">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/Reserve.jpg" alt="Reserve-img">
       </picture>
     </div>
 
-    <img id="back-green02" src="img/x32_1.png" alt="back-green02">
+    <img id="back-green02" src="<?php echo get_template_directory_uri(); ?>/images/x32_1.png" alt="back-green02">
   </section>
 
 <!--パンくずリスト**********************************************************-->
@@ -52,7 +57,7 @@
     <p>※ 2営業日以内にご返信いたします。</p>
   </section>
 
-<?php include ('wave-parts.html'); ?>
-<?php include ('top.html'); ?>
+<?php include ('unit-wave-parts.php'); ?>
+<?php include ('unit-top.php'); ?>
 
-<?php include ('footer.php'); ?>
+<?php get_footer();?>

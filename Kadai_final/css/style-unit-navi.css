@@ -62,14 +62,14 @@ body {
   }
   #nav-pc{
     display: flex;
-    color: #0C4324;
+    /* color: #0C4324; */
     align-items: center;
     justify-content: space-around;
   }
-  #nav-pc >ul {
+  #menu-nav-pc> {
     padding: 0;
   }
-  #nav-pc >ul >li{
+  #menu-nav-pc >li{
     display: inline-block;
     list-style-type: none;
     padding: 0;
@@ -82,24 +82,24 @@ body {
   }
 
 /* ナビゲーションのリンクの装飾設定 */
-  #nav-pc >ul>li> a {
+#menu-nav-pc>li> a {
     text-decoration: none;
   }
-  #nav-pc >ul>li> a:link {color: #0C4324;}
-  #nav-pc >ul>li> a:visited {color:#0C4324;}
-  #nav-pc >ul>li> a:hover {color: #000000;}
-  #nav-pc >ul>li> a:active {color:#0C4324;}
+  #menu-nav-pc>li> a:link {color: #0C4324;}
+  #menu-nav-pc>li> a:visited {color:#0C4324;}
+  #menu-nav-pc>li> a:hover {color: #000000;}
+  #menu-nav-pc>li> a:active {color:#0C4324;}
 
-  #nav-pc >ul>li> .reservation {
+#menu-item-22 > a {
     background-color: #0C4324;
-    color: #ffffff;
+    color: #ffffff !important;
     padding: 5px 10px;
     border-radius: 7px;
   }
-  #nav-pc >ul>li> .reservation:link {color: #ffffff;}
-  #nav-pc >ul>li> .reservation:visited {color:#ffffff;}
-  #nav-pc >ul>li> .reservation:hover {color: #000000;}
-  #nav-pc >ul>li> .reservation:active {color:#EBF0DC;}
+  #menu-item-22> a:link {color: #ffffff !important;}
+  #menu-item-22> a:visited {color:#ffffff !important;}
+  #menu-item-22> a:hover {color: #000000 !important;}
+  #menu-item-22> a:active {color:#EBF0DC !important;}
 }
 
 
@@ -192,10 +192,10 @@ p{
     margin: 50px 30px 0px 30px;
   }
 
-  #nav-sp >ul {
+  #menu-nav-pc-1 {
     margin: 30px 30px 0 30px;
   }
-  #nav-sp >ul >li{
+  #menu-nav-pc-1 >li{
     display: block;
     list-style-type: none;
     padding: 0;
@@ -204,30 +204,30 @@ p{
   }
 
   /* ナビゲーションのリンクの装飾設定 */
-  #nav-sp >ul>li> a {
+  #menu-nav-pc-1 >li> a {
       display: block;
       text-decoration: none;
       color: #000000;
   }
-  #nav-sp >ul>li> a:link {color: #000000;}
-  #nav-sp >ul>li> a:visited {color: #000000;}
-  #nav-sp >ul>li> a:hover {color: #000000;}
-  #nav-sp >ul>li> a:active {color: #000000;}
+  #menu-nav-pc-1 >li> a:link {color: #000000;}
+  #menu-nav-pc-1 >li> a:visited {color: #000000;}
+  #menu-nav-pc-1 >li> a:hover {color: #000000;}
+  #menu-nav-pc-1 >li> a:active {color: #000000;}
 
 
-  #nav-sp >ul>li> .reservation {
+  .menu-item-22> a {
     display: block;
     text-decoration: none;
     text-align: center;
     background-color: #0C4324;
-    color: #ffffff;
+    color: #ffffff !important;
     padding: 5px 10px;
     border-radius: 7px;
   }
-  #nav-sp >ul>li> .reservation:link {color: #ffffff;}
-  #nav-sp >ul>li> .reservation:visited {color:#ffffff;}
-  #nav-sp >ul>li> .reservation:hover {color: #000000;}
-  #nav-sp >ul>li> .reservation:active {color:#EBF0DC;}
+  .menu-item-22> a:link {color: #ffffff !important;}
+  .menu-item-22> a:visited {color:#ffffff !important;}
+  .menu-item-22> a:hover {color: #000000 !important;}
+  .menu-item-22> a:active {color:#EBF0DC !important;}
 }
 
 

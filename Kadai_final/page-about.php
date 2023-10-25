@@ -1,13 +1,18 @@
-<!--*****************************
-- 当院について (about.html)
-*****************************-->
+<!-- ***************************** -->
+<!--
+Template Name: 当院について (about)
+-->
+<!-- ***************************** -->
 
-<?php include ('header.php'); ?>
+<?php get_header();?>
 
 <!-- ABOUT CSS -->
-<link rel="stylesheet" href="css/style-main-about.css">
-<link rel="stylesheet" href="css/style-parts-home.css">
-  
+<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/style-main-about.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-unit-home.css">
+
+<?php include ('unit-header-nav.php'); ?>
+
+
 <main>
   <article>
     
@@ -22,13 +27,13 @@
       <div id="back-img"></div>
       <picture id="top-img-pct">
         <!-- SP時画像 -->
-        <source media="(max-width: 767px)" srcset="img/SP-About.jpg" alt="About-img">
+        <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/SP-About.jpg" alt="About-img">
         <!-- PC時画像 -->
-        <img src="img/About.jpg" alt="About-img">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/About.jpg" alt="About-img">
       </picture>
     </div>
 
-    <img id="back-green02" src="img/x32_1.png" alt="back-green02">
+    <img id="back-green02" src="<?php echo get_template_directory_uri(); ?>/images/x32_1.png" alt="back-green02">
   </section>
 
 <!--パンくずリスト**********************************************************-->
@@ -40,18 +45,18 @@
 <!-- コンセプト・特徴 **********************************************************-->
   <section id="about">
     <h1 id="about-h1back">Concept</h1>
-    <img id="about-bigicon" src="img/BGicon_Light.png" alt="BGicon_Light">
+    <img id="about-bigicon" src="<?php echo get_template_directory_uri(); ?>/images/BGicon_Light.png" alt="BGicon_Light">
 
     <div id="about-table">
 
     <div id="about-img" >
-        <img class="about-img" src="img/Group 2126.png">
+        <img class="about-img" src="<?php echo get_template_directory_uri(); ?>/images/Group 2126.png">
     </div>
 
       <div id="about-left">
         <div>
           <p id="about-title">
-            <img src="img/BGicon.png" alt="about-title-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/BGicon.png" alt="about-title-img">
             <span>Concept<br>特徴</span>
           </p>
           <h2 id="about-message">日々変化するカラダと心を癒すパーソナルトレーナーとして</h2>
@@ -70,20 +75,20 @@
 <!-- 施術の流れ **********************************************************--> 
   <section id="flow">
     <h1 id="flow-h1back">Flow</h1>
-    <img id="flow-bigicon" src="img/BGicon_Light.png" alt="BGicon_Light">
+    <img id="flow-bigicon" src="<?php echo get_template_directory_uri(); ?>/images/BGicon_Light.png" alt="BGicon_Light">
       
     <div id="flow-table">
 
       <picture id="flow-img" >
         <!-- SP時画像 -->
-        <source media="(max-width: 767px)" srcset="img/SP-Flow-Imagegroup.jpg" alt="flow-img">
+        <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/SP-Flow-Imagegroup.jpg" alt="flow-img">
         <!-- PC時画像 -->
-        <img src="img/Flow-Imagegroup.jpg" alt="flow-img">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/Flow-Imagegroup.jpg" alt="flow-img">
       </picture>
 
       <div id="flow-left">
           <p id="flow-title">
-            <img src="img/BGicon.png" alt="flow-title-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/BGicon.png" alt="flow-title-img">
             <span>Flow<br>施術の流れ</span>
           </p>
           <ol id="flow-list">
@@ -102,9 +107,9 @@
   <section id="treatment">
     <div id="treatment-title">
       <h3>
-        <img src="img/Frame 2122.png">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/Frame 2122.png">
         <span>根本改善のポイント</span>
-        <img src="img/Frame 2564.png">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/Frame 2564.png">
       </h3>
       <h3><br>お体の状態や生活習慣、ご要望を丁寧にお伺いします。
         <br>ご自身でできるケアなども含めて施術方針をお作りします。</h3>
@@ -112,21 +117,21 @@
     <table id="treatment-table">
       <tr>
         <td class="treatment-table-items">
-          <img class="treatment_img" src="img/Point1.jpg" alt="カウンセリング写真">
+          <img class="treatment_img" src="<?php echo get_template_directory_uri(); ?>/images/Point1.jpg" alt="カウンセリング写真">
           <h3 class="dark-green">丁寧なカウンセリング</h3>
         <td class="treatment-table-items">
-          <img class="treatment_img" src="img/Point2.jpg" alt="分析写真">
+          <img class="treatment_img" src="<?php echo get_template_directory_uri(); ?>/images/Point2.jpg" alt="分析写真">
           <h3 class="dark-green">徹底的分析</h3>
         </td>
         <td class="treatment-table-items">
-          <img class="treatment_img" src="img/Point3.jpg" alt="施術計画写真">
+          <img class="treatment_img" src="<?php echo get_template_directory_uri(); ?>/images/Point3.jpg" alt="施術計画写真">
           <h3 class="dark-green"> 施術計画のご提案</h3>
         </td>
       </tr>
     </table>
   </section>
 
-  <?php include ('wave-parts.html'); ?>
-  <?php include ('top.html'); ?> 
+  <?php include ('unit-wave-parts.php'); ?>
+  <?php include ('unit-top.php'); ?> 
 
-  <?php include ('footer.php'); ?>
+  <?php get_footer();?>

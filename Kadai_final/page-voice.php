@@ -1,12 +1,17 @@
-<!--*****************************
-  - お客様の声 (voice.html)
-*****************************-->
 
-<?php include ('header.php'); ?>
+<!-- ***************************** -->
+<!--
+Template Name: お客様の声 (voice)
+-->
+<!-- ***************************** -->
+
+<?php get_header();?>
 
 <!-- VOICE CSS -->
-<link rel="stylesheet" href="css/style-main-voice.css">
-<link rel="stylesheet" href="css/style-parts-home.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-main-voice.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-unit-home.css">
+
+<?php include ('unit-header-nav.php'); ?>
 
 <main>
   <article>
@@ -22,13 +27,13 @@
       <div id="back-img"></div>
       <picture id="top-img-pct">
       <!-- SP時画像 -->
-      <source media="(max-width: 767px)" srcset="img/SP_Voice1.jpg" alt="Voice-img">
+      <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/SP_Voice1.jpg" alt="Voice-img">
       <!-- PC時画像 -->
-      <img src="img/Voice1.jpg" alt="Voice-img">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/Voice1.jpg" alt="Voice-img">
       </picture>
     </div>
 
-    <img id="back-green02" src="img/x32_1.png" alt="back-green02">
+    <img id="back-green02" src="<?php echo get_template_directory_uri(); ?>/images/x32_1.png" alt="back-green02">
   </section>
 
 <!--パンくずリスト**********************************************************-->
@@ -43,7 +48,7 @@
     <!-- voice01 -->
     <div class="voice-item">
       <div>
-        <img class="voice-img" src="img/TOP-user1.jpg" alt="User-img">
+        <img class="voice-img" src="<?php echo get_template_directory_uri(); ?>/images/TOP-user1.jpg" alt="User-img">
       </div>
       <div class="voice-comment">
         <h3 class="dark-green">S・K様 30代女性</h3>
@@ -56,7 +61,7 @@
     <!-- voice02 -->
     <div class="voice-item">
       <div>
-      <img class="voice-img" src="img/TOP-user2.jpg" alt="User-img">
+      <img class="voice-img" src="<?php echo get_template_directory_uri(); ?>/images/TOP-user2.jpg" alt="User-img">
       </div>
       <div class="voice-comment">
         <h3 class="dark-green">T・M様 40代男性</h3>
@@ -69,7 +74,7 @@
     <!-- voice03 -->
     <div class="voice-item">
       <div>
-      <img class="voice-img" src="img/TOP-user3.jpg" alt="User-img">
+      <img class="voice-img" src="<?php echo get_template_directory_uri(); ?>/images/TOP-user3.jpg" alt="User-img">
       </div>
       <div class="voice-comment">
         <h3 class="dark-green">S・T様 60代女性</h3>
@@ -82,7 +87,7 @@
   </section>
 
 
-<?php include ('wave-parts.html'); ?>
-<?php include ('top.html'); ?>
+<?php include ('unit-wave-parts.php'); ?>
+<?php include ('unit-top.php'); ?>
 
-<?php include ('footer.php'); ?>
+<?php get_footer();?>

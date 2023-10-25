@@ -1,9 +1,8 @@
 <!-- TOPに戻るボタン -->
 
-<link rel="stylesheet" href="css/style-parts-top.css">
 
 <div id="top-btn">
 <a href="#html-top">
-  <img src="img/btn_01.png">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/btn_01.png">
 </a>
 </div>

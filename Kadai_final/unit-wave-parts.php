@@ -1,7 +1,7 @@
   
-<link rel="stylesheet" href="css/style-parts-wave.css">
+
   
   <!-- wave **********************************************************--> 
   <section id="wave">
-    <img class="wave" src="img/wave.png" alt="wave-img">
+    <img class="wave" src="<?php echo get_template_directory_uri(); ?>/images/wave.png" alt="wave-img">
   </section>

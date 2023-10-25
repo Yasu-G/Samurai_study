@@ -1,13 +1,11 @@
- /*
- Theme Name: Kadai_final
- Theme URI: https://www.sejuku.net/
- Description: SAMURAI ENGINEERのKadai_final
- Version: 1.0.0
- Author: SAMURAI ENGINEER
- Author URI: https://www.sejuku.net/
- */
-
-
+/*
+Theme Name: KADAI FINAL
+Theme URI: https://www.sejuku.net/
+Description: SAMURAI ENGINEERのKadai final
+Version: 1.0.0
+Author: SAMURAI ENGINEER
+Author URI: https://www.sejuku.net/
+*/
 
 
 /* rest css入れる方がいい */
@@ -58,11 +56,11 @@
 #back-img {
   position: absolute;
   top: 0;
-  left: 21%;
-  width: 500px;
-  height: 80%;
+  right: 0;
+  width: 80%;
+  height: 100%;
   background-color: #F0F5E1;
-  clip-path: circle(500px at 100% 30%);
+  clip-path: circle(700px at 70% 30%);
   z-index: -2;
 }
 #back-green01 {
@@ -162,7 +160,7 @@
     padding: 5px 10px 5px 10px;
     border-radius: 7px;
   }
-  #news05{
+  #news05 {
     margin-left: 1em;
     font-size: 16px;
     color: #000000;

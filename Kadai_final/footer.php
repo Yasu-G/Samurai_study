@@ -1,14 +1,11 @@
 
-<!-- Footer CSS -->
-<link rel="stylesheet" href="css/style-parts-footer.css">
-
 <!-- アクセス **********************************************************--> 
 <section id="access"> 
   <div id="access-title-box">
     <h3 id="access-title">
-      <img src="img/Frame 2122.png">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/Frame 2122.png">
       <span>お気軽にご来院ください</span>
-      <img src="img/Frame 2564.png">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/Frame 2564.png">
     </h3>
   </div>
   <table id="access-table">
@@ -69,15 +66,15 @@
 
 <footer>
   <div id="footer-nav">
-    <img id="logo" src="img/Frame 2259.png" alt="logo">
+    <img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/Frame 2259.png" alt="logo">
     <nav id="footer-nav-pc">
       <ul>
-        <li><a href="index.php">ホーム </a></li>
-        <li><a href="about.php">当院について </a> </li>
-        <li><a href="price.php">コース・料金 </a> </li>
-        <li><a href="information.php">お知らせ </a></li>
-        <li><a href="voice.php">お客様の声 </a></li>
-        <li><a href="contact-thanks.php">ご予約・お問合せ </a></li>
+        <li><a href="<?php echo home_url(); ?>/index">ホーム </a></li>
+        <li><a href="<?php echo home_url(); ?>/about">当院について </a> </li>
+        <li><a href="<?php echo home_url(); ?>/price">コース・料金 </a> </li>
+        <li><a href="<?php echo home_url(); ?>/information">お知らせ </a></li>
+        <li><a href="<?php echo home_url(); ?>/voice">お客様の声 </a></li>
+        <li><a href="<?php echo home_url(); ?>/contact-thanks">ご予約・お問合せ </a></li>
       </ul>
     </nav>
   </div>
@@ -88,7 +85,9 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!-- slickの読み込み -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="script.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+
+<?php wp_footer(); ?>
 
 </body>
 </html>
