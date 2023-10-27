@@ -251,6 +251,13 @@ Author URI: https://www.sejuku.net/
     /* height: 850px; */
     text-align: center;
     padding: 70px 0 150px 0;
+
+  }
+  #course-background {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background-color: #F0F5E1;
     z-index: -3;
   }
@@ -288,7 +295,9 @@ Author URI: https://www.sejuku.net/
   }
   /* リンク関係 */
   #course-link{
+    position: relative;
     margin: 0px auto 0 auto;
+    z-index: 100;
   }
 
 /* お客様の声の設定 ***********************************************************/

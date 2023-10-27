@@ -48,29 +48,28 @@ Template Name: ホーム (HOME)
       <span id="news02">お知らせ</span>
       </div>
     <div id="news-sec02">
-      <!-- <div>
-        <div id="news03">日時</div>
-        <div id="news04">営業日時</div>
-      </div>
-      <div id="news05">年末年位の営業日について</div> -->
 
-      <?php
-      $args = array (
-        'post_type' => 'post',
-        'category_name' => 'opendate',
-        'posts_per_page' => 1,
+
+    <?php
+      $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+      $args = array(
+        'posts_per_page'   => 1, // 読み込みたい記事数（全件取得時は-1）
+        'category'         => '4', // 読み込みたいカテゴリID（複数の場合は '1,2'）
+        'orderby'          => 'ID', // 何順で記事を読み込むか（省略時は日付順）
+        'order'            => 'ASC', // 昇順(ASC)か降順か(DESC）
+        'paged' => $paged
       );
       $posts = get_posts($args);
-      ?>
+    ?>
 
 
-      <?php foreach($posts as $post): ?>
-        <?php setup_postdata($post); ?>
+    <?php foreach($posts as $post): ?>
+    <?php setup_postdata($post); ?>
 
-        <?php
-          $cat = get_the_category();
-          $catname = $cat[0]->cat_name;
-        ?>
+    <?php
+      $cat = get_the_category();
+      $catname = $cat[0]->cat_name;
+    ?>
         
         <div>
           <div id="news03">
@@ -85,13 +84,13 @@ Template Name: ホーム (HOME)
             <?php echo the_title(); ?>
         </div> 
 
-        <?php endforeach; ?>
-        <!-- 使用した投稿データをリセット -->
-      <?php wp_reset_postdata(); ?>
+    <?php endforeach; ?>
+    <!-- 使用した投稿データをリセット -->
+    <?php wp_reset_postdata(); ?>
 
     </div>
     <div id="news-link">
-      <a href="news.html">-> お知らせ一覧へ</a>
+      <a href="<?php echo esc_url( home_url( '/information/' ) ); ?>">-> お知らせ一覧へ</a>
     </div>
   </section>
 
@@ -116,7 +115,7 @@ Template Name: ホーム (HOME)
               また、根本的に症状を改善するために、お客様ご自身で行えるケアやストレッチもお伝えします。
               ご不安な点や疑問点などお気軽にご相談くださいませ。</p>
             <div id="about-link" class="links" >
-              <a href="about.html">-> 当院について</a>
+              <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">-> 当院について</a>
             </div>
           </div> 
         </div>
@@ -129,6 +128,7 @@ Template Name: ホーム (HOME)
 
 <!-- コース・料金 **********************************************************--> 
   <section id="course">
+    <div id="course-background"></div>
     <img class="course-bigicon" src="<?php echo get_template_directory_uri(); ?>/images/BGicon_Green.png" alt="BGicon_Green">
     <h1 id="h1-back">course</h1>
     <h3>
@@ -165,7 +165,7 @@ Template Name: ホーム (HOME)
     </table>
 
     <div id="course-link" class="links">
-      <a href="course.html">-> コース・料金詳細へ</a>
+      <a href="<?php echo esc_url( home_url( '/course/' ) ); ?>">-> コース・料金詳細へ</a>
     </div>
   </section>
 
@@ -220,7 +220,7 @@ Template Name: ホーム (HOME)
       </tr>
     </table>
     <div id="voice-link" class="links">
-      <a href="voice.html">-> お客様の声一覧へ </a> 
+      <a href="<?php echo esc_url( home_url( '/voice/' ) ); ?>">-> お客様の声一覧へ </a> 
     </div>
 
 

@@ -14,7 +14,7 @@
   margin: 50px 200px 50px 150px;
   align-items: center;
 }
-.voice-img {
+.voice-img >img {
   border-radius: 50%;
 }
 .voice-comment {

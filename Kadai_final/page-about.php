@@ -37,10 +37,7 @@ Template Name: 当院について (about)
   </section>
 
 <!--パンくずリスト**********************************************************-->
-  <section id="pan-list">
-    <span>ホーム ＞</span>
-    <span id="pan-here">当院について</span>
-  </section>
+<?php include ('unit-pan-list.php'); ?>
 
 <!-- コンセプト・特徴 **********************************************************-->
   <section id="about">

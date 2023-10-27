@@ -239,9 +239,15 @@
       width: 100%;
       text-align: center;
       padding: 70px 0 150px 0;
+      overflow:hidden;
+    }
+    #course-background {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
       background-color: #F0F5E1;
       z-index: -3;
-      overflow:hidden;
     }
     .course-bigicon {
       position: absolute;

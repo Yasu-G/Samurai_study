@@ -37,10 +37,7 @@ Template Name: コース・料金 (course)
   </section>
 
 <!--パンくずリスト**********************************************************-->
-  <section id="pan-list">
-    <span>ホーム ＞</span>
-    <span id="pan-here">コース・料金</span>
-  </section>
+<?php include ('unit-pan-list.php'); ?>
 
 <!-- コース・料金 **********************************************************--> 
 <section id="course">

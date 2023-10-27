@@ -37,52 +37,48 @@ Template Name: お客様の声 (voice)
   </section>
 
 <!--パンくずリスト**********************************************************-->
-  <section id="pan-list">
-    <span>ホーム ＞</span>
-    <span id="pan-here">お客様の声</span>
-  </section>
+<?php include ('unit-pan-list.php'); ?>
 
 
 <!-- お客様の声一覧 **********************************************************--> 
   <section id="voice-list">
-    <!-- voice01 -->
+
+    <?php
+      $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+      $args = array(
+        'posts_per_page'   => 5, // 読み込みたい記事数（全件取得時は-1）
+        'category'         => '7', // 読み込みたいカテゴリID（複数の場合は '1,2'）
+        'orderby'          => 'ID', // 何順で記事を読み込むか（省略時は日付順）
+        'order'            => 'ASC', // 昇順(ASC)か降順か(DESC）
+        'paged' => $paged
+      );
+      $posts = get_posts($args);
+      ?>
+
+      <!--ループ  -->
+      <?php foreach($posts as $post): ?>
+      <?php setup_postdata($post); ?>
+
+      <?php
+        $cat = get_the_category();
+        $catname = $cat[0]->cat_name;
+      ?>
+
+
+    <!-- voice -->
     <div class="voice-item">
-      <div>
-        <img class="voice-img" src="<?php echo get_template_directory_uri(); ?>/images/TOP-user1.jpg" alt="User-img">
+      <div class="voice-img">
+        <?php the_post_thumbnail(); ?> 
       </div>
       <div class="voice-comment">
-        <h3 class="dark-green">S・K様 30代女性</h3>
-        <p>1ヶ月で腰の痛みが軽減しました。自分で自宅でできるケアも教えていただき、お任せしてよかったです。
-          お客様の声本文お客様の声本文お客様の声本文お客様の声本文お客様の声本文お客様の声本文
-          お客様の声本文お客様の声本文お客様の声本文</p>
+        <h3 class="dark-green"><?php echo $catname; ?> </h3>
+        <p> <?php the_content(); ?></p>
       </div>
     </div>
 
-    <!-- voice02 -->
-    <div class="voice-item">
-      <div>
-      <img class="voice-img" src="<?php echo get_template_directory_uri(); ?>/images/TOP-user2.jpg" alt="User-img">
-      </div>
-      <div class="voice-comment">
-        <h3 class="dark-green">T・M様 40代男性</h3>
-        <p>マラソンで右膝が痛むので、施術を受けています。
-          なぜ痛みが生じるのかを身体の仕組みから教えていただき、
-          普段の練習メニューも工夫できています。</p>
-      </div>
-    </div>
-
-    <!-- voice03 -->
-    <div class="voice-item">
-      <div>
-      <img class="voice-img" src="<?php echo get_template_directory_uri(); ?>/images/TOP-user3.jpg" alt="User-img">
-      </div>
-      <div class="voice-comment">
-        <h3 class="dark-green">S・T様 60代女性</h3>
-        <p>転倒して足を骨折したのをきっかけに、
-            痛みの軽減と筋肉の衰えを防ぐための方針を立てていただいています。
-            今は毎日元気に近所を散歩できています。</p>
-      </div>
-    </div>
+    <?php endforeach; ?>
+    <!-- 使用した投稿データをリセット -->
+    <?php wp_reset_postdata(); ?>
 
   </section>
 

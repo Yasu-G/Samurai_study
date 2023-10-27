@@ -17,7 +17,8 @@
     margin-bottom: 50px;
   }
   #posting-right {
-    margin:0 150px 0 50px;
+    width: 40%;
+    margin:0 50px 0 50px;
   }
   .posting-title >a {
     font-size: 24px;
@@ -47,8 +48,10 @@
     background-color: #468459;
     border-radius: 5px;
   }
+
+  /* サイドばー */
   #category-items {
-    width: 300px;
+    width: 20%;
   }
   #category-items >h3 {
   color: #000000;
@@ -114,8 +117,10 @@
       background-color: #468459;
       border-radius: 5px;
     }
+
+    /* サイドばー */
     #category-items {
-      width: 300px;
+      width: 100%;
     }
     #category-items >h3 {
     color: #000000;

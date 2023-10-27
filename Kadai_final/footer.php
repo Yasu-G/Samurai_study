@@ -51,7 +51,7 @@
           </tr>
         </table>
         <div id="access-link">
-          <a href="contact-thanks.html">ご予約・お問合せはこちらから</a> 
+          <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">ご予約・お問合せはこちらから</a> 
         </div>
       </th>
       <th id="access-map">
@@ -68,14 +68,9 @@
   <div id="footer-nav">
     <img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/Frame 2259.png" alt="logo">
     <nav id="footer-nav-pc">
-      <ul>
-        <li><a href="<?php echo home_url(); ?>/index">ホーム </a></li>
-        <li><a href="<?php echo home_url(); ?>/about">当院について </a> </li>
-        <li><a href="<?php echo home_url(); ?>/price">コース・料金 </a> </li>
-        <li><a href="<?php echo home_url(); ?>/information">お知らせ </a></li>
-        <li><a href="<?php echo home_url(); ?>/voice">お客様の声 </a></li>
-        <li><a href="<?php echo home_url(); ?>/contact-thanks">ご予約・お問合せ </a></li>
-      </ul>
+
+      <?php wp_nav_menu(); ?>
+
     </nav>
   </div>
   <p id="footer-bottom">©︎2023 SAMURAI整体院</p>

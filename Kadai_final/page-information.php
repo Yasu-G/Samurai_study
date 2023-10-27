@@ -1,7 +1,6 @@
 <!-- ***************************** -->
 <!--
 Template Name: お知らせ (information)
-Template Post Type: post
 -->
 <!-- ***************************** -->
 
@@ -37,11 +36,8 @@ Template Post Type: post
   </section>
 
 <!--パンくずリスト**********************************************************-->
-  <section id="pan-list">
-    <span>ホーム ＞</span>
-    <span id="pan-here">お知らせ</span>
-  </section>
 
+  <?php include ('unit-pan-list.php'); ?>
 
 <!-- 投稿一覧 **********************************************************--> 
   <section id="information-list">
@@ -50,12 +46,24 @@ Template Post Type: post
       <div id="posting-items">
 
       <?php
-        // $posts = get_posts();
+        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+        $args = array(
+          'posts_per_page'   => 5, // 読み込みたい記事数（全件取得時は-1）
+          'category'         => '8', // 読み込みたいカテゴリID（複数の場合は '1,2'）
+          'orderby'          => 'ID', // 何順で記事を読み込むか（省略時は日付順）
+          'order'            => 'ASC', // 昇順(ASC)か降順か(DESC）
+          'paged' => $paged
+        );
+        $posts = get_posts($args);
         ?>
 
-        <?php 
-          if(have_posts()):
-          while(have_posts()):the_post(); 
+      <!--　ループ  -->
+      <?php foreach($posts as $post): ?>
+        <?php setup_postdata($post); ?>
+
+        <?php
+          $cat = get_the_category();
+          $catname = $cat[0]->cat_name;
         ?>
 
           <div class="posting-item">
@@ -70,14 +78,22 @@ Template Post Type: post
               <p class="posting-date">
                 <?php echo get_the_date(); ?>
                 <span class="category-name">
-                  <?php echo get_the_category()[0]->cat_name; ?> 
+                  <?php echo $catname; ?> 
                 </span>
               </p>
             </div>
           </div>
 
-          <?php endwhile; ?>
-        <?php endif; ?> 
+                  <!-- ページネーション -->
+        <?php
+        if(function_exists('wp_pagenavi')) {
+        wp_pagenavi();
+        }
+        ?>
+
+      <?php endforeach; ?>
+        <!-- 使用した投稿データをリセット -->
+      <?php wp_reset_postdata(); ?>
 
       </div>
 
